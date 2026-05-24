@@ -34,26 +34,12 @@ html,body{width:100%;min-height:100vh;background:#020d1a;}
   border-bottom:1px solid rgba(0,180,255,0.2);
   margin-bottom:16px;
 }
-.logo{
-  font-family:'Orbitron',monospace;
-  font-weight:900;font-size:22px;
-  color:#00c8ff;letter-spacing:4px;
-  text-shadow:0 0 24px rgba(0,200,255,0.5);
-}
+.logo{font-family:'Orbitron',monospace;font-weight:900;font-size:22px;color:#00c8ff;letter-spacing:4px;text-shadow:0 0 24px rgba(0,200,255,0.5);}
 .logo span{color:#fff;font-weight:400;}
 .logo-sub{font-size:11px;color:rgba(0,200,255,0.4);letter-spacing:3px;margin-top:4px;}
-.clock{
-  font-family:'Orbitron',monospace;font-size:18px;
-  color:#00c8ff;letter-spacing:3px;
-  text-shadow:0 0 10px rgba(0,200,255,0.4);
-}
+.clock{font-family:'Orbitron',monospace;font-size:18px;color:#00c8ff;letter-spacing:3px;text-shadow:0 0 10px rgba(0,200,255,0.4);}
 .clock-sub{font-size:10px;color:rgba(0,200,255,0.4);margin-top:4px;text-align:right;letter-spacing:2px;}
-.status-dot{
-  display:inline-block;width:8px;height:8px;border-radius:50%;
-  background:#00ff88;margin-right:6px;
-  box-shadow:0 0 8px #00ff88;
-  animation:pulse 2s ease-in-out infinite;
-}
+.status-dot{display:inline-block;width:8px;height:8px;border-radius:50%;background:#00ff88;margin-right:6px;box-shadow:0 0 8px #00ff88;animation:pulse 2s ease-in-out infinite;}
 @keyframes pulse{0%,100%{opacity:1;}50%{opacity:0.3;}}
 
 .row{display:grid;gap:14px;margin-bottom:14px;}
@@ -64,21 +50,9 @@ html,body{width:100%;min-height:100vh;background:#020d1a;}
   .row-3-2{grid-template-columns:1fr;}
 }
 
-.card{
-  background:rgba(4,22,48,0.85);
-  border:1px solid rgba(0,180,255,0.2);
-  border-radius:8px;padding:16px;
-  position:relative;overflow:hidden;
-  backdrop-filter:blur(6px);
-}
-.card::before{
-  content:'';position:absolute;top:0;left:0;right:0;height:1px;
-  background:linear-gradient(90deg,transparent,rgba(0,200,255,0.5),transparent);
-}
-.card-title{
-  font-size:10px;letter-spacing:2px;color:rgba(0,200,255,0.55);
-  text-transform:uppercase;margin-bottom:10px;
-}
+.card{background:rgba(4,22,48,0.85);border:1px solid rgba(0,180,255,0.2);border-radius:8px;padding:16px;position:relative;overflow:hidden;backdrop-filter:blur(6px);}
+.card::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,rgba(0,200,255,0.5),transparent);}
+.card-title{font-size:10px;letter-spacing:2px;color:rgba(0,200,255,0.55);text-transform:uppercase;margin-bottom:10px;}
 
 .stat-val{font-family:'Orbitron',monospace;font-size:34px;font-weight:700;color:#fff;line-height:1;}
 .stat-val.blue{color:#00c8ff;text-shadow:0 0 16px rgba(0,200,255,0.4);}
@@ -87,17 +61,8 @@ html,body{width:100%;min-height:100vh;background:#020d1a;}
 .stat-sub{font-size:10px;color:rgba(160,220,255,0.4);margin-top:6px;letter-spacing:1px;}
 
 .globe-area{display:flex;align-items:center;justify-content:center;height:140px;position:relative;margin:8px 0;}
-.globe{
-  width:90px;height:90px;border-radius:50%;
-  background:radial-gradient(circle at 35% 30%,#1e7fcb,#0a3a80 50%,#041428);
-  border:1px solid rgba(0,180,255,0.5);
-  box-shadow:0 0 40px rgba(0,140,255,0.25),inset 0 0 30px rgba(0,60,140,0.5);
-  position:relative;z-index:2;
-}
-.ring{
-  position:absolute;border-radius:50%;border:1px solid rgba(0,200,255,0.2);
-  top:50%;left:50%;transform:translate(-50%,-50%);
-}
+.globe{width:90px;height:90px;border-radius:50%;background:radial-gradient(circle at 35% 30%,#1e7fcb,#0a3a80 50%,#041428);border:1px solid rgba(0,180,255,0.5);box-shadow:0 0 40px rgba(0,140,255,0.25),inset 0 0 30px rgba(0,60,140,0.5);position:relative;z-index:2;}
+.ring{position:absolute;border-radius:50%;border:1px solid rgba(0,200,255,0.2);top:50%;left:50%;transform:translate(-50%,-50%);}
 .ring1{width:114px;height:114px;animation:spin 8s linear infinite;}
 .ring2{width:134px;height:134px;animation:spin 12s linear infinite reverse;border-color:rgba(0,200,255,0.12);}
 .ring3{width:154px;height:154px;animation:spin 18s linear infinite;border-color:rgba(0,200,255,0.06);}
@@ -109,17 +74,18 @@ html,body{width:100%;min-height:100vh;background:#020d1a;}
   border:1px solid rgba(0,180,255,0.12);
   border-radius:6px;padding:12px 14px;margin-bottom:10px;
   cursor:pointer;
-  transition:border-color .2s, box-shadow .2s;
+  text-decoration:none;display:block;
+  transition:border-color .2s,box-shadow .2s,transform .15s;
 }
 .proj-item:last-child{margin-bottom:0;}
-.proj-item:hover{border-color:rgba(0,200,255,0.35);box-shadow:0 0 12px rgba(0,200,255,0.08);}
-.proj-item.open{border-color:rgba(0,200,255,0.4);}
+.proj-item:hover{border-color:rgba(0,200,255,0.5);box-shadow:0 0 18px rgba(0,200,255,0.12);transform:translateX(3px);}
 
 .badge{display:inline-block;font-size:9px;letter-spacing:1px;padding:2px 10px;border-radius:2px;margin-bottom:8px;}
 .badge-active{background:rgba(0,255,136,0.1);color:#00ff88;border:1px solid rgba(0,255,136,0.25);}
 .badge-planning{background:rgba(0,200,255,0.1);color:#00c8ff;border:1px solid rgba(0,200,255,0.25);}
 .badge-paused{background:rgba(255,160,0,0.1);color:#ffa000;border:1px solid rgba(255,160,0,0.25);}
 .badge-archived{background:rgba(100,100,100,0.1);color:#888;border:1px solid rgba(100,100,100,0.25);}
+
 .proj-name{font-size:13px;font-weight:bold;color:#e0f4ff;margin-bottom:3px;}
 .proj-desc{font-size:10px;color:rgba(160,220,255,0.45);margin-bottom:8px;}
 .progress-row{display:flex;align-items:center;gap:10px;}
@@ -127,39 +93,8 @@ html,body{width:100%;min-height:100vh;background:#020d1a;}
 .pfill{height:100%;border-radius:2px;background:linear-gradient(90deg,#0060b8,#00c8ff);box-shadow:0 0 6px rgba(0,200,255,0.4);}
 .ppct{font-size:10px;color:#00c8ff;min-width:30px;text-align:right;}
 .proj-phase{font-size:9px;color:rgba(0,200,255,0.35);margin-top:6px;}
-.proj-toggle{float:right;font-size:10px;color:rgba(0,200,255,0.4);margin-top:-2px;transition:transform .25s;}
-.proj-item.open .proj-toggle{transform:rotate(180deg);}
-
-/* ── 展开详情面板 ── */
-.proj-detail{
-  display:none;
-  margin-top:12px;
-  border-top:1px solid rgba(0,180,255,0.12);
-  padding-top:12px;
-}
-.proj-item.open .proj-detail{display:block;}
-.detail-title{font-size:9px;letter-spacing:2px;color:rgba(0,200,255,0.45);text-transform:uppercase;margin-bottom:7px;}
-.milestone-row{
-  display:flex;align-items:center;gap:8px;
-  font-size:10px;color:rgba(180,230,255,0.65);
-  margin-bottom:5px;
-}
-.ms-dot{width:7px;height:7px;border-radius:50%;flex-shrink:0;}
-.ms-dot.done{background:#00ff88;box-shadow:0 0 5px #00ff88;}
-.ms-dot.active{background:#00c8ff;box-shadow:0 0 5px #00c8ff;animation:pulse 2s ease-in-out infinite;}
-.ms-dot.partial{background:#ffa000;}
-.ms-dot.pending{background:rgba(100,150,200,0.35);border:1px solid rgba(0,180,255,0.2);}
-.detail-task{
-  background:rgba(0,10,30,0.5);
-  border-left:2px solid rgba(0,180,255,0.2);
-  border-radius:0 3px 3px 0;
-  padding:4px 9px;font-size:10px;
-  color:rgba(180,225,255,0.6);
-  margin-bottom:4px;
-}
-.detail-stats{display:flex;gap:16px;margin-bottom:10px;}
-.ds-item{font-size:10px;color:rgba(160,220,255,0.5);}
-.ds-item span{font-family:'Orbitron',monospace;color:#00c8ff;font-size:13px;margin-right:4px;}
+.proj-arrow{float:right;font-size:12px;color:rgba(0,200,255,0.35);margin-top:-1px;transition:color .2s;}
+.proj-item:hover .proj-arrow{color:#00c8ff;}
 
 .bars{display:flex;align-items:flex-end;gap:8px;height:90px;padding-top:10px;}
 .bar-col{flex:1;display:flex;flex-direction:column;align-items:center;gap:5px;}
@@ -223,7 +158,7 @@ html,body{width:100%;min-height:100vh;background:#020d1a;}
 
   <div class="row row-3-2">
     <div class="card">
-      <div class="card-title">项目进度 · PROJECT STATUS <span style="font-size:9px;color:rgba(0,200,255,0.3);letter-spacing:1px;">（点击展开详情）</span></div>
+      <div class="card-title">项目进度 · PROJECT STATUS <span style="font-size:9px;color:rgba(0,200,255,0.3);letter-spacing:1px;">（点击进入详情）</span></div>
       <div id="proj-list"></div>
     </div>
 
@@ -270,61 +205,23 @@ tick();setInterval(tick,1000);
 
 fetch('./data.json?t='+Date.now()).then(r=>r.json()).then(render).catch(e=>console.warn('data.json missing',e));
 
-function msClass(s){
-  return {done:'done',active:'active',partial:'partial',pending:'pending'}[s]||'pending';
-}
-
-function buildDetail(p){
-  const tasks = (p.openTasks||0), done = (p.completedTasks||0);
-  let html = `<div class="detail-stats">
-    <div class="ds-item"><span>${tasks}</span>待办</div>
-    <div class="ds-item"><span>${done}</span>已完成</div>
-    <div class="ds-item"><span>${p.lastActivity||'--'}</span>最后活动</div>
-  </div>`;
-
-  if((p.milestones||[]).length){
-    html += `<div class="detail-title">Milestones</div>`;
-    p.milestones.forEach(m=>{
-      const cls = msClass(m.status);
-      const target = m.target ? ` <span style="color:rgba(0,200,255,0.3);margin-left:6px;">${m.target}</span>` : '';
-      html += `<div class="milestone-row"><div class="ms-dot ${cls}"></div>${m.name}${target}</div>`;
-    });
-  }
-
-  if((p.pendingItems||[]).length){
-    html += `<div class="detail-title" style="margin-top:10px;">待办事项</div>`;
-    p.pendingItems.forEach(t=>{
-      html += `<div class="detail-task">${t}</div>`;
-    });
-  }
-
-  if((p.recurringTasks||[]).length){
-    html += `<div class="detail-title" style="margin-top:10px;">周期任务</div>`;
-    p.recurringTasks.forEach(t=>{
-      html += `<div class="detail-task" style="border-left-color:rgba(0,255,136,0.3);">${t}</div>`;
-    });
-  }
-
-  return html;
-}
-
 function render(d){
-  const projects = d.projects || [];
-  const total    = projects.length;
-  const activeN  = projects.filter(p=>p.status==='active').length;
-  const planN    = projects.filter(p=>p.status==='planning').length;
-  const pausedN  = projects.filter(p=>p.status==='paused').length;
-  const allDone  = projects.reduce((a,p)=>a+(p.completedTasks||0),0);
+  const projects=d.projects||[];
+  const total=projects.length;
+  const activeN=projects.filter(p=>p.status==='active').length;
+  const planN=projects.filter(p=>p.status==='planning').length;
+  const pausedN=projects.filter(p=>p.status==='paused').length;
+  const allDone=projects.reduce((a,p)=>a+(p.completedTasks||0),0);
 
-  document.getElementById('s-total').textContent   = total;
-  document.getElementById('s-active').textContent  = activeN;
-  document.getElementById('s-planning').textContent= planN;
-  document.getElementById('s-done').textContent    = allDone;
-  document.getElementById('footer').textContent    = 'LAST SYNC: '+(d.lastUpdated||'--').slice(0,10)+' · andrewljf001 · MROCIOA-PM v1.0';
+  document.getElementById('s-total').textContent=total;
+  document.getElementById('s-active').textContent=activeN;
+  document.getElementById('s-planning').textContent=planN;
+  document.getElementById('s-done').textContent=allDone;
+  document.getElementById('footer').textContent='LAST SYNC: '+(d.lastUpdated||'--').slice(0,10)+' · andrewljf001 · MROCIOA-PM v1.0';
 
-  const pl = document.getElementById('proj-list');
-  pl.innerHTML = '';
-  const sorted = [...projects].sort((a,b)=>{
+  const pl=document.getElementById('proj-list');
+  pl.innerHTML='';
+  const sorted=[...projects].sort((a,b)=>{
     const order={active:0,planning:1,paused:2,archived:3};
     return (order[a.status]??9)-(order[b.status]??9);
   });
@@ -332,25 +229,24 @@ function render(d){
     const bc={active:'badge-active',planning:'badge-planning',paused:'badge-paused',archived:'badge-archived'}[p.status]||'badge-planning';
     const bt={active:'● ACTIVE',planning:'◌ PLANNING',paused:'⏸ PAUSED',archived:'■ ARCHIVED'}[p.status]||p.status.toUpperCase();
     const pct=p.progress||0;
-    const div=document.createElement('div');
-    div.className='proj-item';
-    div.innerHTML=`
+    const a=document.createElement('a');
+    a.className='proj-item';
+    a.href=`./project.html?id=${p.id}`;
+    a.innerHTML=`
       <span class="badge ${bc}">${bt}</span>
-      <span class="proj-toggle">▼</span>
+      <span class="proj-arrow">→</span>
       <div class="proj-name">${p.name}</div>
       <div class="proj-desc">${p.description||''}</div>
       <div class="progress-row">
         <div class="pbar"><div class="pfill" style="width:${pct}%"></div></div>
         <div class="ppct">${pct}%</div>
       </div>
-      <div class="proj-phase">▷ ${p.currentPhase||''}</div>
-      <div class="proj-detail">${buildDetail(p)}</div>`;
-    div.addEventListener('click',()=>div.classList.toggle('open'));
-    pl.appendChild(div);
+      <div class="proj-phase">▷ ${p.currentPhase||''}</div>`;
+    pl.appendChild(a);
   });
 
   // 饼图
-  const pieTotal = projects.filter(p=>p.status!=='archived').length||1;
+  const pieTotal=projects.filter(p=>p.status!=='archived').length||1;
   const svg=document.getElementById('pie-svg');
   const cx=45,cy=45,r=30,circ=2*Math.PI*r;
   const segs=[
