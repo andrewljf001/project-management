@@ -103,12 +103,18 @@ html,body{width:100%;min-height:100vh;background:#020d1a;}
 .ring3{width:154px;height:154px;animation:spin 18s linear infinite;border-color:rgba(0,200,255,0.06);}
 @keyframes spin{to{transform:translate(-50%,-50%) rotate(360deg);}}
 
+/* ── 项目卡片 ── */
 .proj-item{
   background:rgba(0,18,45,0.6);
   border:1px solid rgba(0,180,255,0.12);
   border-radius:6px;padding:12px 14px;margin-bottom:10px;
+  cursor:pointer;
+  transition:border-color .2s, box-shadow .2s;
 }
 .proj-item:last-child{margin-bottom:0;}
+.proj-item:hover{border-color:rgba(0,200,255,0.35);box-shadow:0 0 12px rgba(0,200,255,0.08);}
+.proj-item.open{border-color:rgba(0,200,255,0.4);}
+
 .badge{display:inline-block;font-size:9px;letter-spacing:1px;padding:2px 10px;border-radius:2px;margin-bottom:8px;}
 .badge-active{background:rgba(0,255,136,0.1);color:#00ff88;border:1px solid rgba(0,255,136,0.25);}
 .badge-planning{background:rgba(0,200,255,0.1);color:#00c8ff;border:1px solid rgba(0,200,255,0.25);}
@@ -121,6 +127,39 @@ html,body{width:100%;min-height:100vh;background:#020d1a;}
 .pfill{height:100%;border-radius:2px;background:linear-gradient(90deg,#0060b8,#00c8ff);box-shadow:0 0 6px rgba(0,200,255,0.4);}
 .ppct{font-size:10px;color:#00c8ff;min-width:30px;text-align:right;}
 .proj-phase{font-size:9px;color:rgba(0,200,255,0.35);margin-top:6px;}
+.proj-toggle{float:right;font-size:10px;color:rgba(0,200,255,0.4);margin-top:-2px;transition:transform .25s;}
+.proj-item.open .proj-toggle{transform:rotate(180deg);}
+
+/* ── 展开详情面板 ── */
+.proj-detail{
+  display:none;
+  margin-top:12px;
+  border-top:1px solid rgba(0,180,255,0.12);
+  padding-top:12px;
+}
+.proj-item.open .proj-detail{display:block;}
+.detail-title{font-size:9px;letter-spacing:2px;color:rgba(0,200,255,0.45);text-transform:uppercase;margin-bottom:7px;}
+.milestone-row{
+  display:flex;align-items:center;gap:8px;
+  font-size:10px;color:rgba(180,230,255,0.65);
+  margin-bottom:5px;
+}
+.ms-dot{width:7px;height:7px;border-radius:50%;flex-shrink:0;}
+.ms-dot.done{background:#00ff88;box-shadow:0 0 5px #00ff88;}
+.ms-dot.active{background:#00c8ff;box-shadow:0 0 5px #00c8ff;animation:pulse 2s ease-in-out infinite;}
+.ms-dot.partial{background:#ffa000;}
+.ms-dot.pending{background:rgba(100,150,200,0.35);border:1px solid rgba(0,180,255,0.2);}
+.detail-task{
+  background:rgba(0,10,30,0.5);
+  border-left:2px solid rgba(0,180,255,0.2);
+  border-radius:0 3px 3px 0;
+  padding:4px 9px;font-size:10px;
+  color:rgba(180,225,255,0.6);
+  margin-bottom:4px;
+}
+.detail-stats{display:flex;gap:16px;margin-bottom:10px;}
+.ds-item{font-size:10px;color:rgba(160,220,255,0.5);}
+.ds-item span{font-family:'Orbitron',monospace;color:#00c8ff;font-size:13px;margin-right:4px;}
 
 .bars{display:flex;align-items:flex-end;gap:8px;height:90px;padding-top:10px;}
 .bar-col{flex:1;display:flex;flex-direction:column;align-items:center;gap:5px;}
@@ -184,7 +223,7 @@ html,body{width:100%;min-height:100vh;background:#020d1a;}
 
   <div class="row row-3-2">
     <div class="card">
-      <div class="card-title">项目进度 · PROJECT STATUS</div>
+      <div class="card-title">项目进度 · PROJECT STATUS <span style="font-size:9px;color:rgba(0,200,255,0.3);letter-spacing:1px;">（点击展开详情）</span></div>
       <div id="proj-list"></div>
     </div>
 
@@ -231,14 +270,51 @@ tick();setInterval(tick,1000);
 
 fetch('./data.json?t='+Date.now()).then(r=>r.json()).then(render).catch(e=>console.warn('data.json missing',e));
 
+function msClass(s){
+  return {done:'done',active:'active',partial:'partial',pending:'pending'}[s]||'pending';
+}
+
+function buildDetail(p){
+  const tasks = (p.openTasks||0), done = (p.completedTasks||0);
+  let html = `<div class="detail-stats">
+    <div class="ds-item"><span>${tasks}</span>待办</div>
+    <div class="ds-item"><span>${done}</span>已完成</div>
+    <div class="ds-item"><span>${p.lastActivity||'--'}</span>最后活动</div>
+  </div>`;
+
+  if((p.milestones||[]).length){
+    html += `<div class="detail-title">Milestones</div>`;
+    p.milestones.forEach(m=>{
+      const cls = msClass(m.status);
+      const target = m.target ? ` <span style="color:rgba(0,200,255,0.3);margin-left:6px;">${m.target}</span>` : '';
+      html += `<div class="milestone-row"><div class="ms-dot ${cls}"></div>${m.name}${target}</div>`;
+    });
+  }
+
+  if((p.pendingItems||[]).length){
+    html += `<div class="detail-title" style="margin-top:10px;">待办事项</div>`;
+    p.pendingItems.forEach(t=>{
+      html += `<div class="detail-task">${t}</div>`;
+    });
+  }
+
+  if((p.recurringTasks||[]).length){
+    html += `<div class="detail-title" style="margin-top:10px;">周期任务</div>`;
+    p.recurringTasks.forEach(t=>{
+      html += `<div class="detail-task" style="border-left-color:rgba(0,255,136,0.3);">${t}</div>`;
+    });
+  }
+
+  return html;
+}
+
 function render(d){
-  // 全部从 projects 数组自动计算，不依赖 summary 字段
   const projects = d.projects || [];
   const total    = projects.length;
-  const activeN  = projects.filter(p => p.status === 'active').length;
-  const planN    = projects.filter(p => p.status === 'planning').length;
-  const pausedN  = projects.filter(p => p.status === 'paused').length;
-  const allDone  = projects.reduce((a, p) => a + (p.completedTasks || 0), 0);
+  const activeN  = projects.filter(p=>p.status==='active').length;
+  const planN    = projects.filter(p=>p.status==='planning').length;
+  const pausedN  = projects.filter(p=>p.status==='paused').length;
+  const allDone  = projects.reduce((a,p)=>a+(p.completedTasks||0),0);
 
   document.getElementById('s-total').textContent   = total;
   document.getElementById('s-active').textContent  = activeN;
@@ -246,19 +322,21 @@ function render(d){
   document.getElementById('s-done').textContent    = allDone;
   document.getElementById('footer').textContent    = 'LAST SYNC: '+(d.lastUpdated||'--').slice(0,10)+' · andrewljf001 · MROCIOA-PM v1.0';
 
-  // 项目列表（归档项目排最后）
   const pl = document.getElementById('proj-list');
   pl.innerHTML = '';
   const sorted = [...projects].sort((a,b)=>{
-    const order = {active:0, planning:1, paused:2, archived:3};
-    return (order[a.status]??9) - (order[b.status]??9);
+    const order={active:0,planning:1,paused:2,archived:3};
+    return (order[a.status]??9)-(order[b.status]??9);
   });
-  sorted.forEach(p => {
-    const bc = {active:'badge-active', planning:'badge-planning', paused:'badge-paused', archived:'badge-archived'}[p.status] || 'badge-planning';
-    const bt = {active:'● ACTIVE', planning:'◌ PLANNING', paused:'⏸ PAUSED', archived:'■ ARCHIVED'}[p.status] || p.status.toUpperCase();
-    const pct = p.progress || 0;
-    pl.innerHTML += `<div class="proj-item">
+  sorted.forEach(p=>{
+    const bc={active:'badge-active',planning:'badge-planning',paused:'badge-paused',archived:'badge-archived'}[p.status]||'badge-planning';
+    const bt={active:'● ACTIVE',planning:'◌ PLANNING',paused:'⏸ PAUSED',archived:'■ ARCHIVED'}[p.status]||p.status.toUpperCase();
+    const pct=p.progress||0;
+    const div=document.createElement('div');
+    div.className='proj-item';
+    div.innerHTML=`
       <span class="badge ${bc}">${bt}</span>
+      <span class="proj-toggle">▼</span>
       <div class="proj-name">${p.name}</div>
       <div class="proj-desc">${p.description||''}</div>
       <div class="progress-row">
@@ -266,45 +344,46 @@ function render(d){
         <div class="ppct">${pct}%</div>
       </div>
       <div class="proj-phase">▷ ${p.currentPhase||''}</div>
-    </div>`;
+      <div class="proj-detail">${buildDetail(p)}</div>`;
+    div.addEventListener('click',()=>div.classList.toggle('open'));
+    pl.appendChild(div);
   });
 
-  // 饼图（只统计非归档项目）
-  const activeProjects = projects.filter(p => p.status !== 'archived');
-  const pieTotal = activeProjects.length || 1;
-  const svg = document.getElementById('pie-svg');
+  // 饼图
+  const pieTotal = projects.filter(p=>p.status!=='archived').length||1;
+  const svg=document.getElementById('pie-svg');
   const cx=45,cy=45,r=30,circ=2*Math.PI*r;
-  const segs = [
-    {val: activeN,  color:'#00c8ff', label:'Active'},
-    {val: planN,    color:'#ffa000', label:'Planning'},
-    {val: pausedN,  color:'#ff4444', label:'Paused'},
-  ].filter(s => s.val > 0);
-  let offset = 0;
-  let paths = `<circle cx="${cx}" cy="${cy}" r="${r}" fill="none" stroke="rgba(0,60,120,0.4)" stroke-width="14"/>`;
-  segs.forEach(seg => {
-    const frac = seg.val / pieTotal, dash = frac * circ;
-    paths += `<circle cx="${cx}" cy="${cy}" r="${r}" fill="none" stroke="${seg.color}" stroke-width="14" stroke-dasharray="${dash.toFixed(2)} ${circ.toFixed(2)}" stroke-dashoffset="${(-offset).toFixed(2)}" transform="rotate(-90 ${cx} ${cy})"/>`;
-    offset += dash;
+  const segs=[
+    {val:activeN,color:'#00c8ff',label:'Active'},
+    {val:planN,color:'#ffa000',label:'Planning'},
+    {val:pausedN,color:'#ff4444',label:'Paused'},
+  ].filter(s=>s.val>0);
+  let offset=0;
+  let paths=`<circle cx="${cx}" cy="${cy}" r="${r}" fill="none" stroke="rgba(0,60,120,0.4)" stroke-width="14"/>`;
+  segs.forEach(seg=>{
+    const frac=seg.val/pieTotal,dash=frac*circ;
+    paths+=`<circle cx="${cx}" cy="${cy}" r="${r}" fill="none" stroke="${seg.color}" stroke-width="14" stroke-dasharray="${dash.toFixed(2)} ${circ.toFixed(2)}" stroke-dashoffset="${(-offset).toFixed(2)}" transform="rotate(-90 ${cx} ${cy})"/>`;
+    offset+=dash;
   });
-  svg.innerHTML = paths;
-  document.getElementById('pie-total').textContent = pieTotal;
-  document.getElementById('pie-legend').innerHTML = segs.map(s =>
+  svg.innerHTML=paths;
+  document.getElementById('pie-total').textContent=pieTotal;
+  document.getElementById('pie-legend').innerHTML=segs.map(s=>
     `<div class="leg-item"><div class="leg-dot" style="background:${s.color}"></div>${s.label} ${Math.round(s.val/pieTotal*100)}%</div>`
   ).join('');
 
-  // 周活动柱状图
-  const wa = d.weeklyActivity || [];
-  const maxC = Math.max(...wa.map(w => w.commits), 1);
-  document.getElementById('bars').innerHTML = wa.map(w =>
+  // 周活动
+  const wa=d.weeklyActivity||[];
+  const maxC=Math.max(...wa.map(w=>w.commits),1);
+  document.getElementById('bars').innerHTML=wa.map(w=>
     `<div class="bar-col"><div class="bar" style="height:${Math.max(w.commits/maxC*70,2).toFixed(0)}px" title="${w.commits} commits"></div><div class="bar-lbl">${w.day}</div></div>`
   ).join('');
 
-  // 待办列表（只显示非归档项目的待办）
-  const tl = document.getElementById('task-list');
-  tl.innerHTML = '';
-  const allP = [];
-  projects.filter(p => p.status !== 'archived').forEach(p => (p.pendingItems||[]).forEach(t => allP.push(t)));
-  allP.slice(0,6).forEach(t => { tl.innerHTML += `<div class="task-item">${t}</div>`; });
+  // 待办
+  const tl=document.getElementById('task-list');
+  tl.innerHTML='';
+  const allP=[];
+  projects.filter(p=>p.status!=='archived').forEach(p=>(p.pendingItems||[]).forEach(t=>allP.push(t)));
+  allP.slice(0,6).forEach(t=>{tl.innerHTML+=`<div class="task-item">${t}</div>`;});
 }
 </script>
 </body>
