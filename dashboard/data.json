@@ -1,0 +1,92 @@
+{
+  "lastUpdated": "2026-05-24T00:00:00Z",
+  "summary": {
+    "total": 3,
+    "active": 2,
+    "planning": 1,
+    "paused": 0,
+    "completed": 0
+  },
+  "projects": [
+    {
+      "id": "website-optimization",
+      "name": "Website Optimization",
+      "repo": "andrewljf001/website-optimization",
+      "status": "active",
+      "description": "WordPress mrocioa.com — GTM / GA4 / SEO / Google Shopping",
+      "progress": 85,
+      "currentPhase": "阶段五：SEO & 性能优化 / Google Shopping / 广告准备",
+      "openTasks": 3,
+      "completedTasks": 37,
+      "lastActivity": "2026-05-23",
+      "pendingItems": [
+        "Trustpilot 账号注册",
+        "观察自然流量数据（3-5 天）",
+        "开启 Google 购物广告"
+      ],
+      "milestones": [
+        { "name": "阶段一：GA4 via GTM 接入", "status": "done" },
+        { "name": "阶段二：GA4 增强型事件", "status": "done" },
+        { "name": "阶段三：GA4 + Google Ads 打通", "status": "done" },
+        { "name": "阶段四：GTM 备份与归档", "status": "done" },
+        { "name": "阶段五：SEO & Shopping & 广告", "status": "active" }
+      ]
+    },
+    {
+      "id": "DCX-wastewater-process",
+      "name": "DCX 污水处理 PCBA",
+      "repo": "andrewljf001/DCX-wastewater-process",
+      "status": "planning",
+      "description": "被动器件采购、报价与 PCBA 生产协调（德创鑫徐工）",
+      "progress": 5,
+      "currentPhase": "项目初始化",
+      "openTasks": 4,
+      "completedTasks": 0,
+      "lastActivity": "2026-05-22",
+      "pendingItems": [
+        "需求分析",
+        "硬件原理图设计",
+        "PCB 布局",
+        "固件开发"
+      ],
+      "milestones": [
+        { "name": "需求分析", "status": "pending" },
+        { "name": "BOM 报价汇总", "status": "pending" },
+        { "name": "生产协调完成", "status": "pending" }
+      ]
+    },
+    {
+      "id": "IDE-Migration",
+      "name": "IDE Migration",
+      "repo": "andrewljf001/IDE-Migration",
+      "status": "planning",
+      "description": "Keil (Windows) → VS Code (macOS M4)，覆盖 STM32 / 51 / ESP32",
+      "progress": 0,
+      "currentPhase": "Phase 1：Mac 环境配置（未开始）",
+      "openTasks": 22,
+      "completedTasks": 0,
+      "lastActivity": "2026-05-22",
+      "pendingItems": [
+        "Phase 1: Mac 环境配置",
+        "Phase 2: VS Code 配置",
+        "Phase 3: STM32 迁移",
+        "Phase 4: ESP32 迁移",
+        "Phase 5: 51 MCU 迁移"
+      ],
+      "milestones": [
+        { "name": "Phase 1: Mac 环境配置", "status": "pending" },
+        { "name": "Phase 2: VS Code 配置", "status": "pending" },
+        { "name": "Phase 3: STM32 迁移", "status": "pending" }
+      ]
+    }
+  ],
+  "weeklyActivity": [
+    { "day": "Mon", "commits": 0 },
+    { "day": "Tue", "commits": 0 },
+    { "day": "Wed", "commits": 8 },
+    { "day": "Thu", "commits": 12 },
+    { "day": "Fri", "commits": 5 },
+    { "day": "Sat", "commits": 2 },
+    { "day": "Sun", "commits": 1 }
+  ]
+}
