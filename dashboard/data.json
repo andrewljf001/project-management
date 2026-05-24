@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-05-24T12:00:00Z",
+  "lastUpdated": "2026-05-24T13:10:00Z",
   "summary": {
     "total": 3,
     "active": 2,
@@ -13,20 +13,25 @@
       "name": "MROCIOA SEO",
       "repo": "andrewljf001/mrocioa-seo",
       "status": "active",
-      "description": "mrocioa.com 持续 SEO 优化 — 自然流量 / 关键词 / 内容 / 外链",
-      "progress": 5,
+      "description": "mrocioa.com 持续 SEO 优化 — 每日产品页优化 / 每周 Blog / 关键词 / 外链",
+      "progress": 8,
       "currentPhase": "Phase 1：基础建设与数据监控",
-      "openTasks": 7,
-      "completedTasks": 0,
+      "openTasks": 8,
+      "completedTasks": 1,
       "lastActivity": "2026-05-24",
       "pendingItems": [
-        "Trustpilot 账号注册",
-        "GSC 关键词报告分析",
-        "核心页面 On-page SEO 审查",
-        "竞品关键词调研",
-        "站点 sitemap 确认提交",
-        "页面速度优化检查",
-        "自然流量基线数据记录"
+        "On-page SEO · 8K HDMI Switch 产品页（#10，明日 10:30）",
+        "Trustpilot 账号注册（#1）",
+        "自然流量基线数据记录 GA4（#2）",
+        "GSC 关键词报告分析（#3）",
+        "核心页面 On-page SEO 审查（#4）",
+        "竞品关键词调研（#5）",
+        "页面速度优化检查（#7）",
+        "开启 Google 购物广告（#8，低优先级）"
+      ],
+      "recurringTasks": [
+        "每日 10:30 — 产品页 SEO 优化（每天一页）",
+        "每周二/四/日 16:00 — Blog 发布"
       ],
       "milestones": [
         { "name": "v1.0 — 基础 SEO 建设", "status": "active", "target": "2026-Q2" },
@@ -110,6 +115,6 @@
     { "day": "Thu", "commits": 12 },
     { "day": "Fri", "commits": 5 },
     { "day": "Sat", "commits": 2 },
-    { "day": "Sun", "commits": 3 }
+    { "day": "Sun", "commits": 18 }
   ]
 }
