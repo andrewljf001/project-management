@@ -1,9 +1,9 @@
 {
-  "lastUpdated": "2026-05-24T00:00:00Z",
+  "lastUpdated": "2026-05-24T10:00:00Z",
   "summary": {
     "total": 3,
-    "active": 2,
-    "planning": 1,
+    "active": 1,
+    "planning": 2,
     "paused": 0,
     "completed": 0
   },
@@ -47,7 +47,7 @@
         "需求分析",
         "硬件原理图设计",
         "PCB 布局",
-        "固件开发"
+        "BOM 报价汇总"
       ],
       "milestones": [
         { "name": "需求分析", "status": "pending" },
