@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-05-24T13:20:00Z",
+  "lastUpdated": "2026-05-24T20:00:00Z",
   "summary": {
     "total": 4,
     "active": 2,
@@ -14,19 +14,16 @@
       "repo": "andrewljf001/mrocioa-seo",
       "status": "active",
       "description": "mrocioa.com 持续 SEO 优化 — 每日产品页优化 / 每周 Blog / 关键词 / 外链",
-      "progress": 8,
+      "progress": 5,
       "currentPhase": "Phase 1：基础建设与数据监控",
-      "openTasks": 8,
-      "completedTasks": 1,
+      "openTasks": 5,
+      "completedTasks": 0,
       "lastActivity": "2026-05-24",
       "pendingItems": [
-        "On-page SEO · 8K HDMI Switch 产品页（#10，明日 10:30）",
         "Trustpilot 账号注册（#1）",
         "自然流量基线数据记录 GA4（#2）",
         "GSC 关键词报告分析（#3）",
-        "核心页面 On-page SEO 审查（#4）",
         "竞品关键词调研（#5）",
-        "页面速度优化检查（#7）",
         "开启 Google 购物广告（#8，低优先级）"
       ],
       "recurringTasks": [
@@ -115,6 +112,6 @@
     { "day": "Thu", "commits": 12 },
     { "day": "Fri", "commits": 5 },
     { "day": "Sat", "commits": 2 },
-    { "day": "Sun", "commits": 18 }
+    { "day": "Sun", "commits": 20 }
   ]
 }
