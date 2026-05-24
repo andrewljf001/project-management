@@ -1,42 +1,45 @@
 {
-  "lastUpdated": "2026-05-24T10:00:00Z",
+  "lastUpdated": "2026-05-24T12:00:00Z",
   "summary": {
     "total": 3,
-    "active": 1,
-    "planning": 2,
+    "active": 2,
+    "planning": 1,
     "paused": 0,
-    "completed": 0
+    "archived": 1
   },
   "projects": [
     {
-      "id": "website-optimization",
-      "name": "Website Optimization",
-      "repo": "andrewljf001/website-optimization",
+      "id": "mrocioa-seo",
+      "name": "MROCIOA SEO",
+      "repo": "andrewljf001/mrocioa-seo",
       "status": "active",
-      "description": "WordPress mrocioa.com — GTM / GA4 / SEO / Google Shopping",
-      "progress": 85,
-      "currentPhase": "阶段五：SEO & 性能优化 / Google Shopping / 广告准备",
-      "openTasks": 3,
-      "completedTasks": 37,
-      "lastActivity": "2026-05-23",
+      "description": "mrocioa.com 持续 SEO 优化 — 自然流量 / 关键词 / 内容 / 外链",
+      "progress": 5,
+      "currentPhase": "Phase 1：基础建设与数据监控",
+      "openTasks": 7,
+      "completedTasks": 0,
+      "lastActivity": "2026-05-24",
       "pendingItems": [
         "Trustpilot 账号注册",
-        "观察自然流量数据（3-5 天）",
-        "开启 Google 购物广告"
+        "GSC 关键词报告分析",
+        "核心页面 On-page SEO 审查",
+        "竞品关键词调研",
+        "站点 sitemap 确认提交",
+        "页面速度优化检查",
+        "自然流量基线数据记录"
       ],
       "milestones": [
-        { "name": "阶段一：GA4 via GTM 接入", "status": "done" },
-        { "name": "阶段二：GA4 增强型事件", "status": "done" },
-        { "name": "阶段三：GA4 + Google Ads 打通", "status": "done" },
-        { "name": "阶段四：GTM 备份与归档", "status": "done" },
-        { "name": "阶段五：SEO & Shopping & 广告", "status": "active" }
+        { "name": "v1.0 — 基础 SEO 建设", "status": "active", "target": "2026-Q2" },
+        { "name": "v1.1 — 内容策略落地", "status": "pending", "target": "2026-Q3" },
+        { "name": "v1.2 — 外链与权重建设", "status": "pending", "target": "2026-Q3" },
+        { "name": "v2.0 — 流量稳定增长", "status": "pending", "target": "2026-Q4" }
       ]
     },
     {
       "id": "DCX-wastewater-process",
       "name": "DCX 污水处理 PCBA",
       "repo": "andrewljf001/DCX-wastewater-process",
-      "status": "planning",
+      "status": "active",
       "description": "被动器件采购、报价与 PCBA 生产协调（德创鑫徐工）",
       "progress": 5,
       "currentPhase": "项目初始化",
@@ -78,6 +81,26 @@
         { "name": "Phase 2: VS Code 配置", "status": "pending" },
         { "name": "Phase 3: STM32 迁移", "status": "pending" }
       ]
+    },
+    {
+      "id": "website-optimization",
+      "name": "Website Optimization",
+      "repo": "andrewljf001/website-optimization",
+      "status": "archived",
+      "description": "WordPress mrocioa.com — GTM / GA4 / SEO / Google Shopping（已归档）",
+      "progress": 85,
+      "currentPhase": "已归档 2026-05-24",
+      "openTasks": 0,
+      "completedTasks": 37,
+      "lastActivity": "2026-05-24",
+      "pendingItems": [],
+      "milestones": [
+        { "name": "阶段一：GA4 via GTM 接入", "status": "done" },
+        { "name": "阶段二：GA4 增强型事件", "status": "done" },
+        { "name": "阶段三：GA4 + Google Ads 打通", "status": "done" },
+        { "name": "阶段四：GTM 备份与归档", "status": "done" },
+        { "name": "阶段五：SEO & Shopping & 广告", "status": "partial" }
+      ]
     }
   ],
   "weeklyActivity": [
@@ -87,6 +110,6 @@
     { "day": "Thu", "commits": 12 },
     { "day": "Fri", "commits": 5 },
     { "day": "Sat", "commits": 2 },
-    { "day": "Sun", "commits": 1 }
+    { "day": "Sun", "commits": 3 }
   ]
 }
