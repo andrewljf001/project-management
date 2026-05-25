@@ -6,8 +6,14 @@
 
 | 项目 | 状态 | 进度 | 当前阶段 |
 |------|------|------|----------|
+| [pcbaforge-platform](projects/pcbaforge-platform.md) | 🟢 active | 10% | 阶段一：项目初始化与管理文档建立 |
+| [CC-pcba-order-website](projects/CC-pcba-order-website.md) | 🟢 active | 10% | v1.0 三模式报价计算器 + GitHub Pages |
+| [pcb-order-website](projects/pcb-order-website.md) | 🟢 active | 20% | v1.0 首页 DEMO + 报价计算器 |
 | [mrocioa-seo](projects/mrocioa-seo.md) | 🟢 active | 5% | Phase 1：基础建设与数据监控 |
 | [DCX-wastewater-process](projects/DCX-wastewater-process.md) | 🟢 active | 5% | 项目初始化 |
+| [commercial-display-b2b](projects/commercial-display-b2b.md) | 🟢 active | 5% | v1.0 首页 + 产品页 + WhatsApp 对接 |
+| [chinese-ceramic-art](projects/chinese-ceramic-art.md) | 🟢 active | 5% | v1.0 首页 + 藏品页 + 联系页 |
+| [lidar-promo-website](projects/lidar-promo-website.md) | 🟢 active | 5% | 初始化，待开发 |
 | [IDE-Migration](projects/IDE-Migration.md) | 🔵 planning | 0% | Phase 1：Mac 环境配置（未开始）|
 | [website-optimization](projects/website-optimization.md) | ⬛ archived | 85% | 已归档 2026-05-24 |
 
@@ -20,9 +26,16 @@ project-management/
 │   ├── index.html         # 看板模板（只生成一次，永不修改）
 │   └── data.json          # 数据文件（每次同步只更新此文件）
 ├── projects/              # 各项目进度快照
+│   ├── pcbaforge-platform.md
+│   ├── CC-pcba-order-website.md
+│   ├── pcb-order-website.md
 │   ├── mrocioa-seo.md
-│   ├── website-optimization.md
-│   └── ...
+│   ├── DCX-wastewater-process.md
+│   ├── commercial-display-b2b.md
+│   ├── chinese-ceramic-art.md
+│   ├── lidar-promo-website.md
+│   ├── IDE-Migration.md
+│   └── website-optimization.md
 └── logs/                  # 同步记录
     └── 2026-05.md
 ```
@@ -57,4 +70,4 @@ project-management/
 Settings → Pages → Branch: main → 开启后可在线预览看板。
 
 ---
-最后更新：2026-05-24 | Made with ⚡ by andrewljf001
+最后更新：2026-05-25 | Made with ⚡ by andrewljf001
