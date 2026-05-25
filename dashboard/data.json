@@ -1,13 +1,82 @@
 {
-  "lastUpdated": "2026-05-25T08:00:00Z",
+  "lastUpdated": "2026-05-25T11:18:00Z",
   "summary": {
-    "total": 4,
-    "active": 2,
+    "total": 10,
+    "active": 8,
     "planning": 1,
     "paused": 0,
     "archived": 1
   },
   "projects": [
+    {
+      "id": "pcbaforge-platform",
+      "name": "PCBAForge Platform",
+      "repo": "andrewljf001/pcbaforge-platform",
+      "status": "active",
+      "description": "PCB+SMT+THT 全流程接单平台 — Next.js + PostgreSQL + Cloudflare R2（私有）",
+      "progress": 10,
+      "currentPhase": "阶段一：项目初始化与管理文档建立",
+      "openTasks": 6,
+      "completedTasks": 0,
+      "lastActivity": "2026-05-25",
+      "pendingItems": [
+        "阶段一：项目初始化与管理文档建立",
+        "阶段二：前台下单与文件上传到 R2",
+        "阶段三：后台订单列表与文件查看/下载",
+        "阶段四：供应商手动管理与成本利润记录",
+        "阶段五：客户订单状态页与邮件通知",
+        "阶段六：API 自动化、队列与多供应商比价"
+      ],
+      "milestones": [
+        { "name": "阶段一：项目初始化", "status": "active" },
+        { "name": "阶段二：前台下单 + R2 文件上传", "status": "pending" },
+        { "name": "阶段三：后台订单管理", "status": "pending" },
+        { "name": "阶段四：供应商管理", "status": "pending" }
+      ]
+    },
+    {
+      "id": "CC-pcba-order-website",
+      "name": "CC PCBA 接单网站",
+      "repo": "andrewljf001/CC-pcba-order-website",
+      "status": "active",
+      "description": "PCBA 一站式接单网站 — PCB / SMT / 插件 / 混合 Turnkey，三模式报价计算器",
+      "progress": 10,
+      "currentPhase": "v1.0 三模式报价计算器 + GitHub Pages",
+      "openTasks": 3,
+      "completedTasks": 0,
+      "lastActivity": "2026-05-25",
+      "pendingItems": [
+        "完整首页 DEMO（v1.0）",
+        "三模式报价计算器",
+        "GitHub Pages 上线"
+      ],
+      "milestones": [
+        { "name": "v1.0 — 完整 DEMO + 报价计算器", "status": "active" },
+        { "name": "v1.1 — 工艺能力页 + 文件上传引导", "status": "pending" },
+        { "name": "v2.0 — Strapi 后台接入", "status": "pending" }
+      ]
+    },
+    {
+      "id": "pcb-order-website",
+      "name": "PCB 接单网站",
+      "repo": "andrewljf001/pcb-order-website",
+      "status": "active",
+      "description": "PCB 小批量接单网站 B2B — 在线报价计算器 + Gerber 上传 + WhatsApp 对接",
+      "progress": 20,
+      "currentPhase": "v1.0 首页 DEMO + 报价计算器",
+      "openTasks": 2,
+      "completedTasks": 1,
+      "lastActivity": "2026-05-24",
+      "pendingItems": [
+        "全部页面完成 + GitHub Pages 部署（v1.1）",
+        "Strapi 后台接入（v2.0）"
+      ],
+      "milestones": [
+        { "name": "v1.0 — 首页 DEMO + 报价计算器", "status": "active" },
+        { "name": "v1.1 — 全部页面 + GitHub Pages", "status": "pending" },
+        { "name": "v2.0 — Strapi 后台接入", "status": "pending" }
+      ]
+    },
     {
       "id": "mrocioa-seo",
       "name": "MROCIOA SEO",
@@ -58,6 +127,67 @@
         { "name": "需求分析", "status": "pending" },
         { "name": "BOM 报价汇总", "status": "pending" },
         { "name": "生产协调完成", "status": "pending" }
+      ]
+    },
+    {
+      "id": "commercial-display-b2b",
+      "name": "商显 B2B 推广网站",
+      "repo": "andrewljf001/commercial-display-b2b",
+      "status": "active",
+      "description": "商业显示屏 B2B 推广网站 — LED/LCD/广告机/拼接屏，WhatsApp 在线对接",
+      "progress": 5,
+      "currentPhase": "v1.0 首页 + 产品页 + WhatsApp 对接",
+      "openTasks": 2,
+      "completedTasks": 0,
+      "lastActivity": "2026-05-24",
+      "pendingItems": [
+        "首页 + 产品页 + WhatsApp 对接上线（v1.0）",
+        "公司页 + 联系页 + Formspree 表单（v1.1）"
+      ],
+      "milestones": [
+        { "name": "v1.0 — 首页 + 产品页上线", "status": "pending" },
+        { "name": "v1.1 — 公司页 + 联系页", "status": "pending" },
+        { "name": "v2.0 — 中英双语", "status": "pending" }
+      ]
+    },
+    {
+      "id": "chinese-ceramic-art",
+      "name": "中国陶瓷艺术电商",
+      "repo": "andrewljf001/chinese-ceramic-art",
+      "status": "active",
+      "description": "中国陶瓷艺术 B2C 精品电商 — 紫砂壶 / 高端陶瓷，东方禅意美学风格",
+      "progress": 5,
+      "currentPhase": "v1.0 首页 + 藏品页 + 联系页",
+      "openTasks": 2,
+      "completedTasks": 0,
+      "lastActivity": "2026-05-24",
+      "pendingItems": [
+        "首页 + 藏品页 + 联系页上线（v1.0）",
+        "产品详情页 + 品牌故事页（v1.1）"
+      ],
+      "milestones": [
+        { "name": "v1.0 — 首页 + 藏品页上线", "status": "pending" },
+        { "name": "v1.1 — 产品详情页 + 品牌故事", "status": "pending" },
+        { "name": "v2.0 — 中英双语 + 产品 JSON 化", "status": "pending" }
+      ]
+    },
+    {
+      "id": "lidar-promo-website",
+      "name": "激光雷达 B2B 推广网站",
+      "repo": "andrewljf001/lidar-promo-website",
+      "status": "active",
+      "description": "激光雷达 B2B 推广网站 — 海外采购商询价，线下汇款成交",
+      "progress": 5,
+      "currentPhase": "初始化，待开发",
+      "openTasks": 1,
+      "completedTasks": 0,
+      "lastActivity": "2026-05-24",
+      "pendingItems": [
+        "首页 + 产品页 + 询价表单上线（v1.0）"
+      ],
+      "milestones": [
+        { "name": "v1.0 — 首页 + 产品页 + 询价表单", "status": "pending" },
+        { "name": "v1.1 — 公司介绍 + 案例展示", "status": "pending" }
       ]
     },
     {
