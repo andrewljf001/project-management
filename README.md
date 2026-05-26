@@ -6,8 +6,9 @@
 
 | 项目 | 状态 | 进度 | 当前阶段 |
 |------|------|------|----------|
+| [521ARC-product-analysis](projects/521ARC-product-analysis.md) | 🟢 active | 15% | Phase 1：产品分析 + Amazon Listing 优化 |
+| [CC-pcba-order-website](projects/CC-pcba-order-website.md) | 🟢 active | 40% | Phase 3：三模式报价计算器完善中 |
 | [pcbaforge-platform](projects/pcbaforge-platform.md) | 🟢 active | 10% | 阶段一：项目初始化与管理文档建立 |
-| [CC-pcba-order-website](projects/CC-pcba-order-website.md) | 🟢 active | 10% | v1.0 三模式报价计算器 + GitHub Pages |
 | [pcb-order-website](projects/pcb-order-website.md) | 🟢 active | 20% | v1.0 首页 DEMO + 报价计算器 |
 | [mrocioa-seo](projects/mrocioa-seo.md) | 🟢 active | 5% | Phase 1：基础建设与数据监控 |
 | [DCX-wastewater-process](projects/DCX-wastewater-process.md) | 🟢 active | 5% | 项目初始化 |
@@ -26,6 +27,7 @@ project-management/
 │   ├── index.html         # 看板模板（只生成一次，永不修改）
 │   └── data.json          # 数据文件（每次同步只更新此文件）
 ├── projects/              # 各项目进度快照
+│   ├── 521ARC-product-analysis.md
 │   ├── pcbaforge-platform.md
 │   ├── CC-pcba-order-website.md
 │   ├── pcb-order-website.md
@@ -70,4 +72,4 @@ project-management/
 Settings → Pages → Branch: main → 开启后可在线预览看板。
 
 ---
-最后更新：2026-05-25 | Made with ⚡ by andrewljf001
+最后更新：2026-05-26 | Made with ⚡ by andrewljf001
