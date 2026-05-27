@@ -75,4 +75,4 @@ Settings → Pages → Branch: main → 开启后可在线预览看板。
 最后更新：2026-05-26 | Made with ⚡ by andrewljf001
 
 
-规则说明：项目执行规则以  为唯一准则。
+规则说明：项目执行规则以 `RULE.MD` 为唯一准则。
