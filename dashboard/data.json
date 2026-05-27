@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-05-27T10:00:00.000Z",
+  "lastUpdated": "2026-05-27T12:00:00.000Z",
   "summary": {
     "total": 15,
     "active": 8,
@@ -14,14 +14,14 @@
       "repo": "andrewljf001/CC-pcba-order-website",
       "status": "active",
       "description": "PCBA 一站式接单网站 — PCB / SMT / 插件 / 混合 Turnkey，三模式报价计算器",
-      "progress": 40,
-      "currentPhase": "Phase 3：PCB 报价逻辑完善中（铜厚/三档报价/人工报价触发）",
+      "progress": 45,
+      "currentPhase": "Phase 3：博客模块 DB 建表完成，待修复 2 个 P2 Bug（输入法 + 图片外链）",
       "openTasks": 2,
-      "completedTasks": 3,
+      "completedTasks": 4,
       "lastActivity": "2026-05-27",
       "pendingItems": [
-        "SMT / 插件 / 混合 Turnkey 报价模块",
-        "GitHub Pages 上线（v1.0）"
+        "[BUG] 密码输入框中文输入法下出错（Issue #2，P2）",
+        "[BUG] 首页第三张服务图片外链失效（Issue #1，P2）"
       ],
       "milestones": [
         {"name": "Phase 1 — 基础框架搭建", "status": "done"},
@@ -325,7 +325,7 @@
   "weeklyActivity": [
     {"day": "Mon", "commits": 0},
     {"day": "Tue", "commits": 6},
-    {"day": "Wed", "commits": 3},
+    {"day": "Wed", "commits": 4},
     {"day": "Thu", "commits": 0},
     {"day": "Fri", "commits": 0},
     {"day": "Sat", "commits": 3},
