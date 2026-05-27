@@ -1,13 +1,67 @@
 {
-  "lastUpdated": "2026-05-27T03:11:00.456Z",
+  "lastUpdated": "2026-05-27T10:00:00.000Z",
   "summary": {
-    "total": 11,
-    "active": 7,
+    "total": 15,
+    "active": 8,
     "planning": 1,
     "paused": 0,
-    "archived": 3
+    "archived": 6
   },
   "projects": [
+    {
+      "id": "CC-pcba-order-website",
+      "name": "CC PCBA 接单网站",
+      "repo": "andrewljf001/CC-pcba-order-website",
+      "status": "active",
+      "description": "PCBA 一站式接单网站 — PCB / SMT / 插件 / 混合 Turnkey，三模式报价计算器",
+      "progress": 40,
+      "currentPhase": "Phase 3：PCB 报价逻辑完善中（铜厚/三档报价/人工报价触发）",
+      "openTasks": 2,
+      "completedTasks": 3,
+      "lastActivity": "2026-05-27",
+      "pendingItems": [
+        "SMT / 插件 / 混合 Turnkey 报价模块",
+        "GitHub Pages 上线（v1.0）"
+      ],
+      "milestones": [
+        {"name": "Phase 1 — 基础框架搭建", "status": "done"},
+        {"name": "Phase 2 — 首页 DEMO 完成", "status": "done"},
+        {"name": "Phase 3 — 三模式报价计算器", "status": "active"},
+        {"name": "v1.0 — GitHub Pages 上线", "status": "pending"},
+        {"name": "v1.1 — 工艺能力页 + 文件上传引导", "status": "pending"},
+        {"name": "v2.0 — Strapi 后台接入", "status": "pending"}
+      ]
+    },
+    {
+      "id": "fortune-website-project",
+      "name": "Fortune Website",
+      "repo": "andrewljf001/fortune-website-project",
+      "status": "active",
+      "description": "Fortune 网站项目 — Node.js 后端 + 前端 MVP，Railway 部署 + GitHub Pages",
+      "progress": 45,
+      "currentPhase": "MVP Build + Deployment（Railway + GitHub Pages）",
+      "openTasks": 6,
+      "completedTasks": 4,
+      "lastActivity": "2026-05-26",
+      "pendingItems": [
+        "Enable GitHub Pages for frontend",
+        "Deploy backend on Railway",
+        "Add GitHub Actions secrets for Railway",
+        "Configure ALLOWED_ORIGIN to GitHub Pages domain",
+        "Run full flow end-to-end test",
+        "Add admin order management API/page"
+      ],
+      "milestones": [
+        {"name": "Repository initialized", "status": "done"},
+        {"name": "Backend MVP (Auth + Orders API)", "status": "done"},
+        {"name": "Frontend MVP page", "status": "done"},
+        {"name": "CI/CD baseline workflows", "status": "done"},
+        {"name": "Branch strategy (develop/main)", "status": "active"},
+        {"name": "GitHub Pages setup", "status": "pending"},
+        {"name": "Railway backend deployment", "status": "pending"},
+        {"name": "End-to-end test", "status": "pending"}
+      ]
+    },
     {
       "id": "521ARC-product-analysis",
       "name": "521ARC 产品分析",
@@ -25,122 +79,10 @@
         "开始关键词落地执行（SEO 内容优先级已定）"
       ],
       "milestones": [
-        {
-          "name": "Phase 1：产品分析 + Listing 优化",
-          "status": "active"
-        },
-        {
-          "name": "Phase 2：SEO 内容执行",
-          "status": "pending"
-        },
-        {
-          "name": "Phase 3：Amazon 自然流量优化",
-          "status": "pending"
-        },
-        {
-          "name": "Phase 4：目标达成（3-5单/天）",
-          "status": "pending"
-        }
-      ]
-    },
-    {
-      "id": "CC-pcba-order-website",
-      "name": "CC PCBA 接单网站",
-      "repo": "andrewljf001/CC-pcba-order-website",
-      "status": "active",
-      "description": "PCBA 一站式接单网站 — PCB / SMT / 插件 / 混合 Turnkey，三模式报价计算器",
-      "progress": 40,
-      "currentPhase": "Phase 3：PCB 报价逻辑完善中（铜厚/三档报价/人工报价触发）",
-      "openTasks": 2,
-      "completedTasks": 3,
-      "lastActivity": "2026-05-27",
-      "pendingItems": [
-        "SMT / 插件 / 混合 Turnkey 报价模块",
-        "GitHub Pages 上线（v1.0）"
-      ],
-      "milestones": [
-        {
-          "name": "Phase 1 — 基础框架搭建",
-          "status": "done"
-        },
-        {
-          "name": "Phase 2 — 首页 DEMO 完成",
-          "status": "done"
-        },
-        {
-          "name": "Phase 3 — 三模式报价计算器",
-          "status": "active"
-        },
-        {
-          "name": "v1.0 — GitHub Pages 上线",
-          "status": "pending"
-        },
-        {
-          "name": "v1.1 — 工艺能力页 + 文件上传引导",
-          "status": "pending"
-        },
-        {
-          "name": "v2.0 — Strapi 后台接入",
-          "status": "pending"
-        }
-      ]
-    },
-    {
-      "id": "pcbaforge-platform",
-      "name": "PCBAForge Platform",
-      "repo": "andrewljf001/pcbaforge-platform",
-      "status": "archived",
-      "description": "PCB+SMT+THT 全流程接单平台 — Next.js + PostgreSQL + Cloudflare R2（私有）",
-      "progress": 100,
-      "currentPhase": "全部已完成，项目已迁移",
-      "openTasks": 0,
-      "completedTasks": 6,
-      "lastActivity": "2026-05-27",
-      "pendingItems": [],
-      "milestones": [
-        {
-          "name": "阶段一：项目初始化",
-          "status": "done"
-        },
-        {
-          "name": "阶段二：前台下单 + R2 文件上传",
-          "status": "done"
-        },
-        {
-          "name": "阶段三：后台订单管理",
-          "status": "done"
-        },
-        {
-          "name": "阶段四：供应商管理",
-          "status": "done"
-        }
-      ]
-    },
-    {
-      "id": "pcb-order-website",
-      "name": "PCB 接单网站",
-      "repo": "andrewljf001/pcb-order-website",
-      "status": "archived",
-      "description": "PCB 小批量接单网站 B2B — 在线报价计算器 + Gerber 上传 + WhatsApp 对接",
-      "progress": 100,
-      "currentPhase": "全部已完成，项目已迁移",
-      "openTasks": 0,
-      "completedTasks": 3,
-      "lastActivity": "2026-05-24",
-      "pendingItems": [],
-      "milestones": [
-        {
-          "name": "v1.0 — 首页 DEMO + 报价计算器",
-          "status": "done"
-        },
-        {
-          "name": "v1.1 — 全部页面 + GitHub Pages",
-          "status": "done"
-        },
-        {
-          "name": "v2.0 — Strapi 后台接入",
-          "status": "done"
-        }
+        {"name": "Phase 1：产品分析 + Listing 优化", "status": "active"},
+        {"name": "Phase 2：SEO 内容执行", "status": "pending"},
+        {"name": "Phase 3：Amazon 自然流量优化", "status": "pending"},
+        {"name": "Phase 4：目标达成（3-5单/天）", "status": "pending"}
       ]
     },
     {
@@ -166,26 +108,10 @@
         "每周二/四/日 16:00 — Blog 发布"
       ],
       "milestones": [
-        {
-          "name": "v1.0 — 基础 SEO 建设",
-          "status": "active",
-          "target": "2026-Q2"
-        },
-        {
-          "name": "v1.1 — 内容策略落地",
-          "status": "pending",
-          "target": "2026-Q3"
-        },
-        {
-          "name": "v1.2 — 外链与权重建设",
-          "status": "pending",
-          "target": "2026-Q3"
-        },
-        {
-          "name": "v2.0 — 流量稳定增长",
-          "status": "pending",
-          "target": "2026-Q4"
-        }
+        {"name": "v1.0 — 基础 SEO 建设", "status": "active", "target": "2026-Q2"},
+        {"name": "v1.1 — 内容策略落地", "status": "pending", "target": "2026-Q3"},
+        {"name": "v1.2 — 外链与权重建设", "status": "pending", "target": "2026-Q3"},
+        {"name": "v2.0 — 流量稳定增长", "status": "pending", "target": "2026-Q4"}
       ]
     },
     {
@@ -199,25 +125,11 @@
       "openTasks": 4,
       "completedTasks": 0,
       "lastActivity": "2026-05-24",
-      "pendingItems": [
-        "需求分析",
-        "硬件原理图设计",
-        "PCB 布局",
-        "BOM 报价汇总"
-      ],
+      "pendingItems": ["需求分析", "硬件原理图设计", "PCB 布局", "BOM 报价汇总"],
       "milestones": [
-        {
-          "name": "需求分析",
-          "status": "pending"
-        },
-        {
-          "name": "BOM 报价汇总",
-          "status": "pending"
-        },
-        {
-          "name": "生产协调完成",
-          "status": "pending"
-        }
+        {"name": "需求分析", "status": "pending"},
+        {"name": "BOM 报价汇总", "status": "pending"},
+        {"name": "生产协调完成", "status": "pending"}
       ]
     },
     {
@@ -236,18 +148,9 @@
         "公司页 + 联系页 + Formspree 表单（v1.1）"
       ],
       "milestones": [
-        {
-          "name": "v1.0 — 首页 + 产品页上线",
-          "status": "pending"
-        },
-        {
-          "name": "v1.1 — 公司页 + 联系页",
-          "status": "pending"
-        },
-        {
-          "name": "v2.0 — 中英双语",
-          "status": "pending"
-        }
+        {"name": "v1.0 — 首页 + 产品页上线", "status": "pending"},
+        {"name": "v1.1 — 公司页 + 联系页", "status": "pending"},
+        {"name": "v2.0 — 中英双语", "status": "pending"}
       ]
     },
     {
@@ -266,18 +169,9 @@
         "产品详情页 + 品牌故事页（v1.1）"
       ],
       "milestones": [
-        {
-          "name": "v1.0 — 首页 + 藏品页上线",
-          "status": "pending"
-        },
-        {
-          "name": "v1.1 — 产品详情页 + 品牌故事",
-          "status": "pending"
-        },
-        {
-          "name": "v2.0 — 中英双语 + 产品 JSON 化",
-          "status": "pending"
-        }
+        {"name": "v1.0 — 首页 + 藏品页上线", "status": "pending"},
+        {"name": "v1.1 — 产品详情页 + 品牌故事", "status": "pending"},
+        {"name": "v2.0 — 中英双语 + 产品 JSON 化", "status": "pending"}
       ]
     },
     {
@@ -291,18 +185,10 @@
       "openTasks": 1,
       "completedTasks": 0,
       "lastActivity": "2026-05-24",
-      "pendingItems": [
-        "首页 + 产品页 + 询价表单上线（v1.0）"
-      ],
+      "pendingItems": ["首页 + 产品页 + 询价表单上线（v1.0）"],
       "milestones": [
-        {
-          "name": "v1.0 — 首页 + 产品页 + 询价表单",
-          "status": "pending"
-        },
-        {
-          "name": "v1.1 — 公司介绍 + 案例展示",
-          "status": "pending"
-        }
+        {"name": "v1.0 — 首页 + 产品页 + 询价表单", "status": "pending"},
+        {"name": "v1.1 — 公司介绍 + 案例展示", "status": "pending"}
       ]
     },
     {
@@ -324,18 +210,46 @@
         "Phase 5: 51 MCU 迁移"
       ],
       "milestones": [
-        {
-          "name": "Phase 1: Mac 环境配置",
-          "status": "pending"
-        },
-        {
-          "name": "Phase 2: VS Code 配置",
-          "status": "pending"
-        },
-        {
-          "name": "Phase 3: STM32 迁移",
-          "status": "pending"
-        }
+        {"name": "Phase 1: Mac 环境配置", "status": "pending"},
+        {"name": "Phase 2: VS Code 配置", "status": "pending"},
+        {"name": "Phase 3: STM32 迁移", "status": "pending"}
+      ]
+    },
+    {
+      "id": "pcbaforge-platform",
+      "name": "PCBAForge Platform",
+      "repo": "andrewljf001/pcbaforge-platform",
+      "status": "archived",
+      "description": "PCB+SMT+THT 全流程接单平台 — Next.js + PostgreSQL + Cloudflare R2（已迁移）",
+      "progress": 100,
+      "currentPhase": "全部已完成，项目已迁移",
+      "openTasks": 0,
+      "completedTasks": 6,
+      "lastActivity": "2026-05-25",
+      "pendingItems": [],
+      "milestones": [
+        {"name": "阶段一：项目初始化", "status": "done"},
+        {"name": "阶段二：前台下单 + R2 文件上传", "status": "done"},
+        {"name": "阶段三：后台订单管理", "status": "done"},
+        {"name": "阶段四：供应商管理", "status": "done"}
+      ]
+    },
+    {
+      "id": "pcb-order-website",
+      "name": "PCB 接单网站",
+      "repo": "andrewljf001/pcb-order-website",
+      "status": "archived",
+      "description": "PCB 小批量接单网站 B2B — 在线报价计算器 + Gerber 上传 + WhatsApp 对接（已迁移）",
+      "progress": 100,
+      "currentPhase": "全部已完成，项目已迁移",
+      "openTasks": 0,
+      "completedTasks": 3,
+      "lastActivity": "2026-05-24",
+      "pendingItems": [],
+      "milestones": [
+        {"name": "v1.0 — 首页 DEMO + 报价计算器", "status": "done"},
+        {"name": "v1.1 — 全部页面 + GitHub Pages", "status": "done"},
+        {"name": "v2.0 — Strapi 后台接入", "status": "done"}
       ]
     },
     {
@@ -348,60 +262,66 @@
       "currentPhase": "已归档 2026-05-24",
       "openTasks": 0,
       "completedTasks": 37,
-      "lastActivity": "2026-05-24",
+      "lastActivity": "2026-05-23",
       "pendingItems": [],
       "milestones": [
-        {
-          "name": "阶段一：GA4 via GTM 接入",
-          "status": "done"
-        },
-        {
-          "name": "阶段二：GA4 增强型事件",
-          "status": "done"
-        },
-        {
-          "name": "阶段三：GA4 + Google Ads 打通",
-          "status": "done"
-        },
-        {
-          "name": "阶段四：GTM 备份与归档",
-          "status": "done"
-        },
-        {
-          "name": "阶段五：SEO & Shopping & 广告",
-          "status": "partial"
-        }
+        {"name": "阶段一：GA4 via GTM 接入", "status": "done"},
+        {"name": "阶段二：GA4 增强型事件", "status": "done"},
+        {"name": "阶段三：GA4 + Google Ads 打通", "status": "done"},
+        {"name": "阶段四：GTM 备份与归档", "status": "done"},
+        {"name": "阶段五：SEO & Shopping & 广告", "status": "partial"}
       ]
+    },
+    {
+      "id": "E-commerce-workflow",
+      "name": "E-commerce Workflow",
+      "repo": "andrewljf001/E-commerce-workflow",
+      "status": "archived",
+      "description": "电商工作流自动化（2025年项目，已归档）",
+      "progress": 100,
+      "currentPhase": "已归档",
+      "openTasks": 0,
+      "completedTasks": 0,
+      "lastActivity": "2025-07-20",
+      "pendingItems": [],
+      "milestones": []
+    },
+    {
+      "id": "tasks.mrocioa.xyz",
+      "name": "Tasks mrocioa.xyz",
+      "repo": "andrewljf001/tasks.mrocioa.xyz",
+      "status": "archived",
+      "description": "mrocioa.xyz 任务管理系统（2025年项目，已归档）",
+      "progress": 100,
+      "currentPhase": "已归档",
+      "openTasks": 0,
+      "completedTasks": 0,
+      "lastActivity": "2025-07-23",
+      "pendingItems": [],
+      "milestones": []
+    },
+    {
+      "id": "mrocioa-KnowledgeBase",
+      "name": "mrocioa 知识库",
+      "repo": "andrewljf001/mrocioa-KnowledgeBase",
+      "status": "archived",
+      "description": "mrocioa 知识库（2025年私有项目，已归档）",
+      "progress": 100,
+      "currentPhase": "已归档",
+      "openTasks": 0,
+      "completedTasks": 0,
+      "lastActivity": "2025-09-22",
+      "pendingItems": [],
+      "milestones": []
     }
   ],
   "weeklyActivity": [
-    {
-      "day": "Mon",
-      "commits": 0
-    },
-    {
-      "day": "Tue",
-      "commits": 6
-    },
-    {
-      "day": "Wed",
-      "commits": 0
-    },
-    {
-      "day": "Thu",
-      "commits": 0
-    },
-    {
-      "day": "Fri",
-      "commits": 0
-    },
-    {
-      "day": "Sat",
-      "commits": 3
-    },
-    {
-      "day": "Sun",
-      "commits": 0
-    }
+    {"day": "Mon", "commits": 0},
+    {"day": "Tue", "commits": 6},
+    {"day": "Wed", "commits": 3},
+    {"day": "Thu", "commits": 0},
+    {"day": "Fri", "commits": 0},
+    {"day": "Sat", "commits": 3},
+    {"day": "Sun", "commits": 0}
   ]
 }
