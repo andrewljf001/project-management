@@ -74,9 +74,5 @@ Settings → Pages → Branch: main → 开启后可在线预览看板。
 ---
 最后更新：2026-05-26 | Made with ⚡ by andrewljf001
 
-## Codex 同步约定（已测试）
 
-- 当你说「同步进度」：优先在线读取 GitHub（不做本地长期同步）。
-- 若项目不存在：在 `project-management` 新建 `projects/<repo>.md` 并加入看板数据。
-- 若项目存在：按既有格式更新对应项目进度文件，并同步更新 `dashboard/data.json`。
-- 若项目迁移/结束：在项目文件中标记 `archived + 100%`，并写入 `logs/YYYY-MM.md`。
+规则说明：项目执行规则以  为唯一准则。
