@@ -8,8 +8,8 @@
 |------|------|------|----------|
 | [521ARC-product-analysis](projects/521ARC-product-analysis.md) | 🟢 active | 15% | Phase 1：产品分析 + Amazon Listing 优化 |
 | [CC-pcba-order-website](projects/CC-pcba-order-website.md) | 🟢 active | 40% | Phase 3：三模式报价计算器完善中 |
-| [pcbaforge-platform](projects/pcbaforge-platform.md) | 🟢 active | 10% | 阶段一：项目初始化与管理文档建立 |
-| [pcb-order-website](projects/pcb-order-website.md) | 🟢 active | 20% | v1.0 首页 DEMO + 报价计算器 |
+| [pcbaforge-platform](projects/pcbaforge-platform.md) | ⬛ archived | 100% | 全部已完成，项目已迁移 |
+| [pcb-order-website](projects/pcb-order-website.md) | ⬛ archived | 100% | 全部已完成，项目已迁移 |
 | [mrocioa-seo](projects/mrocioa-seo.md) | 🟢 active | 5% | Phase 1：基础建设与数据监控 |
 | [DCX-wastewater-process](projects/DCX-wastewater-process.md) | 🟢 active | 5% | 项目初始化 |
 | [commercial-display-b2b](projects/commercial-display-b2b.md) | 🟢 active | 5% | v1.0 首页 + 产品页 + WhatsApp 对接 |
@@ -73,3 +73,10 @@ Settings → Pages → Branch: main → 开启后可在线预览看板。
 
 ---
 最后更新：2026-05-26 | Made with ⚡ by andrewljf001
+
+## Codex 同步约定（已测试）
+
+- 当你说「同步进度」：优先在线读取 GitHub（不做本地长期同步）。
+- 若项目不存在：在 `project-management` 新建 `projects/<repo>.md` 并加入看板数据。
+- 若项目存在：按既有格式更新对应项目进度文件，并同步更新 `dashboard/data.json`。
+- 若项目迁移/结束：在项目文件中标记 `archived + 100%`，并写入 `logs/YYYY-MM.md`。
