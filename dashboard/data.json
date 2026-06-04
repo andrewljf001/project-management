@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-03T00:00:00.000Z",
+  "lastUpdated": "2026-06-04T00:00:00.000Z",
   "summary": {
     "total": 18,
     "active": 11,
@@ -11,7 +11,7 @@
     {
       "id": "hw-solution-site",
       "name": "硬件方案商网站",
-      "repo": "andrewljf001/hw-solution-site",
+      "repo": "andrewljf001/rogersense",
       "status": "active",
       "description": "全栈硬件+软件+机械方案商英文网站 — 案例展示 + 询价表单 + 社区论坛，GitHub Pages 部署",
       "progress": 20,
