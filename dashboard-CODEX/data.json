@@ -1,32 +1,101 @@
 {
-  "lastUpdated": "2026-05-27T10:00:00.000Z",
+  "lastUpdated": "2026-06-04T00:00:00.000Z",
   "summary": {
-    "total": 15,
-    "active": 8,
+    "total": 18,
+    "active": 11,
     "planning": 1,
     "paused": 0,
     "archived": 6
   },
   "projects": [
     {
+      "id": "hw-solution-site",
+      "name": "硬件方案商网站",
+      "repo": "andrewljf001/rogersense",
+      "status": "active",
+      "description": "全栈硬件+软件+机械方案商英文网站 — 案例展示 + 询价表单 + 社区论坛，GitHub Pages 部署",
+      "progress": 20,
+      "currentPhase": "页面开发中（index / cases / quote / about / forum / admin）",
+      "openTasks": 5,
+      "completedTasks": 1,
+      "lastActivity": "2026-06-03",
+      "pendingItems": [
+        "cases.html 案例展示页",
+        "quote.html 询价表单",
+        "about.html 关于页",
+        "forum.html 社区论坛",
+        "admin.html 后台上传案例"
+      ],
+      "milestones": [
+        {"name": "v1.0 — 首页上线", "status": "active"},
+        {"name": "v1.1 — 案例页 + 询价表单", "status": "pending"},
+        {"name": "v1.2 — 论坛 + 后台管理", "status": "pending"},
+        {"name": "v2.0 — 品牌名确定 + 域名绑定", "status": "pending"}
+      ]
+    },
+    {
+      "id": "bom-pmc-erp",
+      "name": "BOM PMC ERP",
+      "repo": "andrewljf001/bom-pmc-erp",
+      "status": "active",
+      "description": "ERPNext + Codex + 受控 API 网关 = 智能在线物料管理系统，部署于 erp.diyinai.com",
+      "progress": 10,
+      "currentPhase": "第一阶段：VPS 部署 ERPNext + Codex API 网关只读能力",
+      "openTasks": 6,
+      "completedTasks": 0,
+      "lastActivity": "2026-06-02",
+      "pendingItems": [
+        "VPS 上完成 ERPNext 原生部署（Bench）",
+        "erp.diyinai.com 域名解析到 ERPNext",
+        "独立 MariaDB 数据库承载 ERPNext 站点",
+        "建立最小权限 ERPNext API 用户",
+        "实现 Codex API 网关只读能力",
+        "让 Codex 能回答库存/物料/BOM/采购/缺料问题"
+      ],
+      "milestones": [
+        {"name": "ERPNext VPS 部署完成", "status": "active"},
+        {"name": "Codex API 网关只读能力", "status": "pending"},
+        {"name": "Codex 智能问答（库存/BOM/采购）", "status": "pending"},
+        {"name": "写操作权限+人工审批边界", "status": "pending"}
+      ]
+    },
+    {
+      "id": "commercial-display-website",
+      "name": "商显网站（新版）",
+      "repo": "andrewljf001/commercial-display-website",
+      "status": "active",
+      "description": "商业显示屏网站新版（私有）",
+      "progress": 5,
+      "currentPhase": "初始化",
+      "openTasks": 0,
+      "completedTasks": 0,
+      "lastActivity": "2026-05-29",
+      "pendingItems": [],
+      "milestones": [
+        {"name": "v1.0 — 首页上线", "status": "pending"}
+      ]
+    },
+    {
       "id": "CC-pcba-order-website",
       "name": "CC PCBA 接单网站",
       "repo": "andrewljf001/CC-pcba-order-website",
       "status": "active",
       "description": "PCBA 一站式接单网站 — PCB / SMT / 插件 / 混合 Turnkey，三模式报价计算器",
-      "progress": 40,
-      "currentPhase": "Phase 3：PCB 报价逻辑完善中（铜厚/三档报价/人工报价触发）",
-      "openTasks": 2,
-      "completedTasks": 3,
-      "lastActivity": "2026-05-27",
+      "progress": 65,
+      "currentPhase": "Phase 4：安全加固 + Bug 修复，2 个 Bug 待处理",
+      "openTasks": 3,
+      "completedTasks": 8,
+      "lastActivity": "2026-06-02",
       "pendingItems": [
-        "SMT / 插件 / 混合 Turnkey 报价模块",
-        "GitHub Pages 上线（v1.0）"
+        "[Bug #11] 首页 FULL TURNKEY + TESTING 卡片图片失效，需迁移本地托管",
+        "[Bug #10] 后台 PayPal Payment Configuration 在所有模块显示（安全风险）",
+        "[Feature #3] Phase 6：嘉立创订单自动化 — 低优先级"
       ],
       "milestones": [
         {"name": "Phase 1 — 基础框架搭建", "status": "done"},
         {"name": "Phase 2 — 首页 DEMO 完成", "status": "done"},
-        {"name": "Phase 3 — 三模式报价计算器", "status": "active"},
+        {"name": "Phase 3 — 三模式报价计算器", "status": "done"},
+        {"name": "Phase 4 — 安全加固 + Bug 修复", "status": "active"},
         {"name": "v1.0 — GitHub Pages 上线", "status": "pending"},
         {"name": "v1.1 — 工艺能力页 + 文件上传引导", "status": "pending"},
         {"name": "v2.0 — Strapi 后台接入", "status": "pending"}
@@ -91,21 +160,17 @@
       "repo": "andrewljf001/mrocioa-seo",
       "status": "active",
       "description": "mrocioa.com 持续 SEO 优化 — 每日产品页优化 / 每周 Blog / 关键词 / 外链",
-      "progress": 5,
-      "currentPhase": "Phase 1：基础建设与数据监控",
-      "openTasks": 5,
-      "completedTasks": 0,
-      "lastActivity": "2026-05-26",
+      "progress": 30,
+      "currentPhase": "Phase 1：基础建设进行中，sitemap/PageSpeed/On-page 已完成",
+      "openTasks": 4,
+      "completedTasks": 6,
+      "lastActivity": "2026-05-29",
       "pendingItems": [
         "Trustpilot 账号注册（#1）",
         "自然流量基线数据记录 GA4（#2）",
         "GSC 关键词报告分析（#3）",
         "竞品关键词调研（#5）",
         "开启 Google 购物广告（#8，低优先级）"
-      ],
-      "recurringTasks": [
-        "每日 10:30 — 产品页 SEO 优化（每天一页）",
-        "每周二/四/日 16:00 — Blog 发布"
       ],
       "milestones": [
         {"name": "v1.0 — 基础 SEO 建设", "status": "active", "target": "2026-Q2"},
@@ -125,7 +190,12 @@
       "openTasks": 4,
       "completedTasks": 0,
       "lastActivity": "2026-05-24",
-      "pendingItems": ["需求分析", "硬件原理图设计", "PCB 布局", "BOM 报价汇总"],
+      "pendingItems": [
+        "需求分析",
+        "硬件原理图设计",
+        "PCB 布局",
+        "BOM 报价汇总"
+      ],
       "milestones": [
         {"name": "需求分析", "status": "pending"},
         {"name": "BOM 报价汇总", "status": "pending"},
@@ -185,7 +255,9 @@
       "openTasks": 1,
       "completedTasks": 0,
       "lastActivity": "2026-05-24",
-      "pendingItems": ["首页 + 产品页 + 询价表单上线（v1.0）"],
+      "pendingItems": [
+        "首页 + 产品页 + 询价表单上线（v1.0）"
+      ],
       "milestones": [
         {"name": "v1.0 — 首页 + 产品页 + 询价表单", "status": "pending"},
         {"name": "v1.1 — 公司介绍 + 案例展示", "status": "pending"}
@@ -199,7 +271,7 @@
       "description": "Keil (Windows) → VS Code (macOS M4)，覆盖 STM32 / 51 / ESP32",
       "progress": 0,
       "currentPhase": "Phase 1：Mac 环境配置（未开始）",
-      "openTasks": 22,
+      "openTasks": 0,
       "completedTasks": 0,
       "lastActivity": "2026-05-22",
       "pendingItems": [
@@ -316,12 +388,12 @@
     }
   ],
   "weeklyActivity": [
-    {"day": "Mon", "commits": 0},
-    {"day": "Tue", "commits": 6},
+    {"day": "Mon", "commits": 2},
+    {"day": "Tue", "commits": 4},
     {"day": "Wed", "commits": 3},
-    {"day": "Thu", "commits": 0},
-    {"day": "Fri", "commits": 0},
-    {"day": "Sat", "commits": 3},
+    {"day": "Thu", "commits": 5},
+    {"day": "Fri", "commits": 3},
+    {"day": "Sat", "commits": 2},
     {"day": "Sun", "commits": 0}
   ]
 }
