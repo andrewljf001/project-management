@@ -1,0 +1,22 @@
+{
+  "lastUpdated": "2026-06-03T00:00:00.000Z",
+  "project": {
+    "id": "commercial-display-website",
+    "name": "商显网站（新版）",
+    "repo": "andrewljf001/commercial-display-website",
+    "status": "active",
+    "description": "商业显示屏网站新版（私有）",
+    "progress": 5,
+    "currentPhase": "初始化",
+    "openTasks": 0,
+    "completedTasks": 0,
+    "lastActivity": "2026-05-29",
+    "pendingItems": [],
+    "milestones": [
+      {
+        "name": "v1.0 — 首页上线",
+        "status": "pending"
+      }
+    ]
+  }
+}

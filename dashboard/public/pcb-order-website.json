@@ -1,0 +1,30 @@
+{
+  "lastUpdated": "2026-06-03T00:00:00.000Z",
+  "project": {
+    "id": "pcb-order-website",
+    "name": "PCB 接单网站",
+    "repo": "andrewljf001/pcb-order-website",
+    "status": "archived",
+    "description": "PCB 小批量接单网站 B2B — 在线报价计算器 + Gerber 上传 + WhatsApp 对接（已迁移）",
+    "progress": 100,
+    "currentPhase": "全部已完成，项目已迁移",
+    "openTasks": 0,
+    "completedTasks": 3,
+    "lastActivity": "2026-05-24",
+    "pendingItems": [],
+    "milestones": [
+      {
+        "name": "v1.0 — 首页 DEMO + 报价计算器",
+        "status": "done"
+      },
+      {
+        "name": "v1.1 — 全部页面 + GitHub Pages",
+        "status": "done"
+      },
+      {
+        "name": "v2.0 — Strapi 后台接入",
+        "status": "done"
+      }
+    ]
+  }
+}

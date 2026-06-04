@@ -1,0 +1,35 @@
+{
+  "lastUpdated": "2026-06-03T00:00:00.000Z",
+  "project": {
+    "id": "DCX-wastewater-process",
+    "name": "DCX 污水处理 PCBA",
+    "repo": "andrewljf001/DCX-wastewater-process",
+    "status": "active",
+    "description": "被动器件采购、报价与 PCBA 生产协调（德创鑫徐工）",
+    "progress": 5,
+    "currentPhase": "项目初始化",
+    "openTasks": 4,
+    "completedTasks": 0,
+    "lastActivity": "2026-05-24",
+    "pendingItems": [
+      "需求分析",
+      "硬件原理图设计",
+      "PCB 布局",
+      "BOM 报价汇总"
+    ],
+    "milestones": [
+      {
+        "name": "需求分析",
+        "status": "pending"
+      },
+      {
+        "name": "BOM 报价汇总",
+        "status": "pending"
+      },
+      {
+        "name": "生产协调完成",
+        "status": "pending"
+      }
+    ]
+  }
+}

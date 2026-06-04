@@ -1,0 +1,57 @@
+{
+  "lastUpdated": "2026-06-03T00:00:00.000Z",
+  "project": {
+    "id": "fortune-website-project",
+    "name": "Fortune Website",
+    "repo": "andrewljf001/fortune-website-project",
+    "status": "active",
+    "description": "Fortune 网站项目 — Node.js 后端 + 前端 MVP，Railway 部署 + GitHub Pages",
+    "progress": 45,
+    "currentPhase": "MVP Build + Deployment（Railway + GitHub Pages）",
+    "openTasks": 6,
+    "completedTasks": 4,
+    "lastActivity": "2026-05-26",
+    "pendingItems": [
+      "Enable GitHub Pages for frontend",
+      "Deploy backend on Railway",
+      "Add GitHub Actions secrets for Railway",
+      "Configure ALLOWED_ORIGIN to GitHub Pages domain",
+      "Run full flow end-to-end test",
+      "Add admin order management API/page"
+    ],
+    "milestones": [
+      {
+        "name": "Repository initialized",
+        "status": "done"
+      },
+      {
+        "name": "Backend MVP (Auth + Orders API)",
+        "status": "done"
+      },
+      {
+        "name": "Frontend MVP page",
+        "status": "done"
+      },
+      {
+        "name": "CI/CD baseline workflows",
+        "status": "done"
+      },
+      {
+        "name": "Branch strategy (develop/main)",
+        "status": "active"
+      },
+      {
+        "name": "GitHub Pages setup",
+        "status": "pending"
+      },
+      {
+        "name": "Railway backend deployment",
+        "status": "pending"
+      },
+      {
+        "name": "End-to-end test",
+        "status": "pending"
+      }
+    ]
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "lastUpdated": "2026-06-03T00:00:00.000Z",
+  "project": {
+    "id": "bom-pmc-erp",
+    "name": "BOM PMC ERP",
+    "repo": "andrewljf001/bom-pmc-erp",
+    "status": "active",
+    "description": "ERPNext + Codex + 受控 API 网关 = 智能在线物料管理系统，部署于 erp.diyinai.com",
+    "progress": 10,
+    "currentPhase": "第一阶段：VPS 部署 ERPNext + Codex API 网关只读能力",
+    "openTasks": 6,
+    "completedTasks": 0,
+    "lastActivity": "2026-06-02",
+    "pendingItems": [
+      "VPS 上完成 ERPNext 原生部署（Bench）",
+      "erp.diyinai.com 域名解析到 ERPNext",
+      "独立 MariaDB 数据库承载 ERPNext 站点",
+      "建立最小权限 ERPNext API 用户",
+      "实现 Codex API 网关只读能力",
+      "让 Codex 能回答库存/物料/BOM/采购/缺料问题"
+    ],
+    "milestones": [
+      {
+        "name": "ERPNext VPS 部署完成",
+        "status": "active"
+      },
+      {
+        "name": "Codex API 网关只读能力",
+        "status": "pending"
+      },
+      {
+        "name": "Codex 智能问答（库存/BOM/采购）",
+        "status": "pending"
+      },
+      {
+        "name": "写操作权限+人工审批边界",
+        "status": "pending"
+      }
+    ]
+  }
+}

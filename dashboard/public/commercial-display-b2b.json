@@ -1,0 +1,33 @@
+{
+  "lastUpdated": "2026-06-03T00:00:00.000Z",
+  "project": {
+    "id": "commercial-display-b2b",
+    "name": "商显 B2B 推广网站",
+    "repo": "andrewljf001/commercial-display-b2b",
+    "status": "active",
+    "description": "商业显示屏 B2B 推广网站 — LED/LCD/广告机/拼接屏，WhatsApp 在线对接",
+    "progress": 5,
+    "currentPhase": "v1.0 首页 + 产品页 + WhatsApp 对接",
+    "openTasks": 2,
+    "completedTasks": 0,
+    "lastActivity": "2026-05-24",
+    "pendingItems": [
+      "首页 + 产品页 + WhatsApp 对接上线（v1.0）",
+      "公司页 + 联系页 + Formspree 表单（v1.1）"
+    ],
+    "milestones": [
+      {
+        "name": "v1.0 — 首页 + 产品页上线",
+        "status": "pending"
+      },
+      {
+        "name": "v1.1 — 公司页 + 联系页",
+        "status": "pending"
+      },
+      {
+        "name": "v2.0 — 中英双语",
+        "status": "pending"
+      }
+    ]
+  }
+}

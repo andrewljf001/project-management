@@ -1,0 +1,50 @@
+{
+  "lastUpdated": "2026-06-03T00:00:00.000Z",
+  "project": {
+    "id": "CC-pcba-order-website",
+    "name": "CC PCBA 接单网站",
+    "repo": "andrewljf001/CC-pcba-order-website",
+    "status": "active",
+    "description": "PCBA 一站式接单网站 — PCB / SMT / 插件 / 混合 Turnkey，三模式报价计算器",
+    "progress": 65,
+    "currentPhase": "Phase 4：安全加固 + Bug 修复，2 个 Bug 待处理",
+    "openTasks": 3,
+    "completedTasks": 8,
+    "lastActivity": "2026-06-02",
+    "pendingItems": [
+      "[Bug #11] 首页 FULL TURNKEY + TESTING 卡片图片失效，需迁移本地托管",
+      "[Bug #10] 后台 PayPal Payment Configuration 在所有模块显示（安全风险）",
+      "[Feature #3] Phase 6：嘉立创订单自动化 — 低优先级"
+    ],
+    "milestones": [
+      {
+        "name": "Phase 1 — 基础框架搭建",
+        "status": "done"
+      },
+      {
+        "name": "Phase 2 — 首页 DEMO 完成",
+        "status": "done"
+      },
+      {
+        "name": "Phase 3 — 三模式报价计算器",
+        "status": "done"
+      },
+      {
+        "name": "Phase 4 — 安全加固 + Bug 修复",
+        "status": "active"
+      },
+      {
+        "name": "v1.0 — GitHub Pages 上线",
+        "status": "pending"
+      },
+      {
+        "name": "v1.1 — 工艺能力页 + 文件上传引导",
+        "status": "pending"
+      },
+      {
+        "name": "v2.0 — Strapi 后台接入",
+        "status": "pending"
+      }
+    ]
+  }
+}

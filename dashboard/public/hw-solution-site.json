@@ -1,0 +1,40 @@
+{
+  "lastUpdated": "2026-06-03T00:00:00.000Z",
+  "project": {
+    "id": "hw-solution-site",
+    "name": "硬件方案商网站",
+    "repo": "andrewljf001/hw-solution-site",
+    "status": "active",
+    "description": "全栈硬件+软件+机械方案商英文网站 — 案例展示 + 询价表单 + 社区论坛，GitHub Pages 部署",
+    "progress": 20,
+    "currentPhase": "页面开发中（index / cases / quote / about / forum / admin）",
+    "openTasks": 5,
+    "completedTasks": 1,
+    "lastActivity": "2026-06-03",
+    "pendingItems": [
+      "cases.html 案例展示页",
+      "quote.html 询价表单",
+      "about.html 关于页",
+      "forum.html 社区论坛",
+      "admin.html 后台上传案例"
+    ],
+    "milestones": [
+      {
+        "name": "v1.0 — 首页上线",
+        "status": "active"
+      },
+      {
+        "name": "v1.1 — 案例页 + 询价表单",
+        "status": "pending"
+      },
+      {
+        "name": "v1.2 — 论坛 + 后台管理",
+        "status": "pending"
+      },
+      {
+        "name": "v2.0 — 品牌名确定 + 域名绑定",
+        "status": "pending"
+      }
+    ]
+  }
+}

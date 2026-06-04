@@ -1,0 +1,38 @@
+{
+  "lastUpdated": "2026-06-03T00:00:00.000Z",
+  "project": {
+    "id": "website-optimization",
+    "name": "Website Optimization",
+    "repo": "andrewljf001/website-optimization",
+    "status": "archived",
+    "description": "WordPress mrocioa.com — GTM / GA4 / SEO / Google Shopping（已归档）",
+    "progress": 85,
+    "currentPhase": "已归档 2026-05-24",
+    "openTasks": 0,
+    "completedTasks": 37,
+    "lastActivity": "2026-05-23",
+    "pendingItems": [],
+    "milestones": [
+      {
+        "name": "阶段一：GA4 via GTM 接入",
+        "status": "done"
+      },
+      {
+        "name": "阶段二：GA4 增强型事件",
+        "status": "done"
+      },
+      {
+        "name": "阶段三：GA4 + Google Ads 打通",
+        "status": "done"
+      },
+      {
+        "name": "阶段四：GTM 备份与归档",
+        "status": "done"
+      },
+      {
+        "name": "阶段五：SEO & Shopping & 广告",
+        "status": "partial"
+      }
+    ]
+  }
+}

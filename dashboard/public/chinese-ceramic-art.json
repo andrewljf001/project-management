@@ -1,0 +1,33 @@
+{
+  "lastUpdated": "2026-06-03T00:00:00.000Z",
+  "project": {
+    "id": "chinese-ceramic-art",
+    "name": "中国陶瓷艺术电商",
+    "repo": "andrewljf001/chinese-ceramic-art",
+    "status": "active",
+    "description": "中国陶瓷艺术 B2C 精品电商 — 紫砂壶 / 高端陶瓷，东方禅意美学风格",
+    "progress": 5,
+    "currentPhase": "v1.0 首页 + 藏品页 + 联系页",
+    "openTasks": 2,
+    "completedTasks": 0,
+    "lastActivity": "2026-05-24",
+    "pendingItems": [
+      "首页 + 藏品页 + 联系页上线（v1.0）",
+      "产品详情页 + 品牌故事页（v1.1）"
+    ],
+    "milestones": [
+      {
+        "name": "v1.0 — 首页 + 藏品页上线",
+        "status": "pending"
+      },
+      {
+        "name": "v1.1 — 产品详情页 + 品牌故事",
+        "status": "pending"
+      },
+      {
+        "name": "v2.0 — 中英双语 + 产品 JSON 化",
+        "status": "pending"
+      }
+    ]
+  }
+}

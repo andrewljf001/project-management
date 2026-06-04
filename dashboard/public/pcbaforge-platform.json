@@ -1,0 +1,34 @@
+{
+  "lastUpdated": "2026-06-03T00:00:00.000Z",
+  "project": {
+    "id": "pcbaforge-platform",
+    "name": "PCBAForge Platform",
+    "repo": "andrewljf001/pcbaforge-platform",
+    "status": "archived",
+    "description": "PCB+SMT+THT 全流程接单平台 — Next.js + PostgreSQL + Cloudflare R2（已迁移）",
+    "progress": 100,
+    "currentPhase": "全部已完成，项目已迁移",
+    "openTasks": 0,
+    "completedTasks": 6,
+    "lastActivity": "2026-05-25",
+    "pendingItems": [],
+    "milestones": [
+      {
+        "name": "阶段一：项目初始化",
+        "status": "done"
+      },
+      {
+        "name": "阶段二：前台下单 + R2 文件上传",
+        "status": "done"
+      },
+      {
+        "name": "阶段三：后台订单管理",
+        "status": "done"
+      },
+      {
+        "name": "阶段四：供应商管理",
+        "status": "done"
+      }
+    ]
+  }
+}

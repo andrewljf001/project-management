@@ -1,0 +1,17 @@
+{
+  "lastUpdated": "2026-06-03T00:00:00.000Z",
+  "project": {
+    "id": "tasks.mrocioa.xyz",
+    "name": "Tasks mrocioa.xyz",
+    "repo": "andrewljf001/tasks.mrocioa.xyz",
+    "status": "archived",
+    "description": "mrocioa.xyz 任务管理系统（2025年项目，已归档）",
+    "progress": 100,
+    "currentPhase": "已归档",
+    "openTasks": 0,
+    "completedTasks": 0,
+    "lastActivity": "2025-07-23",
+    "pendingItems": [],
+    "milestones": []
+  }
+}

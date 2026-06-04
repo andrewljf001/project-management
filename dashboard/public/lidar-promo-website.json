@@ -1,0 +1,28 @@
+{
+  "lastUpdated": "2026-06-03T00:00:00.000Z",
+  "project": {
+    "id": "lidar-promo-website",
+    "name": "激光雷达 B2B 推广网站",
+    "repo": "andrewljf001/lidar-promo-website",
+    "status": "active",
+    "description": "激光雷达 B2B 推广网站 — 海外采购商询价，线下汇款成交",
+    "progress": 5,
+    "currentPhase": "初始化，待开发",
+    "openTasks": 1,
+    "completedTasks": 0,
+    "lastActivity": "2026-05-24",
+    "pendingItems": [
+      "首页 + 产品页 + 询价表单上线（v1.0）"
+    ],
+    "milestones": [
+      {
+        "name": "v1.0 — 首页 + 产品页 + 询价表单",
+        "status": "pending"
+      },
+      {
+        "name": "v1.1 — 公司介绍 + 案例展示",
+        "status": "pending"
+      }
+    ]
+  }
+}

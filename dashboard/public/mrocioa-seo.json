@@ -1,0 +1,44 @@
+{
+  "lastUpdated": "2026-06-03T00:00:00.000Z",
+  "project": {
+    "id": "mrocioa-seo",
+    "name": "MROCIOA SEO",
+    "repo": "andrewljf001/mrocioa-seo",
+    "status": "active",
+    "description": "mrocioa.com 持续 SEO 优化 — 每日产品页优化 / 每周 Blog / 关键词 / 外链",
+    "progress": 30,
+    "currentPhase": "Phase 1：基础建设进行中，sitemap/PageSpeed/On-page 已完成",
+    "openTasks": 4,
+    "completedTasks": 6,
+    "lastActivity": "2026-05-29",
+    "pendingItems": [
+      "Trustpilot 账号注册（#1）",
+      "自然流量基线数据记录 GA4（#2）",
+      "GSC 关键词报告分析（#3）",
+      "竞品关键词调研（#5）",
+      "开启 Google 购物广告（#8，低优先级）"
+    ],
+    "milestones": [
+      {
+        "name": "v1.0 — 基础 SEO 建设",
+        "status": "active",
+        "target": "2026-Q2"
+      },
+      {
+        "name": "v1.1 — 内容策略落地",
+        "status": "pending",
+        "target": "2026-Q3"
+      },
+      {
+        "name": "v1.2 — 外链与权重建设",
+        "status": "pending",
+        "target": "2026-Q3"
+      },
+      {
+        "name": "v2.0 — 流量稳定增长",
+        "status": "pending",
+        "target": "2026-Q4"
+      }
+    ]
+  }
+}

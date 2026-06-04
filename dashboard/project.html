@@ -38,15 +38,14 @@ html,body{width:100%;min-height:100vh;background:#020d1a;}
 .status-dot{display:inline-block;width:8px;height:8px;border-radius:50%;background:#00ff88;margin-right:6px;box-shadow:0 0 8px #00ff88;animation:pulse 2s ease-in-out infinite;}
 @keyframes pulse{0%,100%{opacity:1;}50%{opacity:0.3;}}
 
-/* back */
-.back{
+/* public marker */
+.public-marker{
   display:inline-flex;align-items:center;gap:8px;
   font-size:11px;color:rgba(0,200,255,0.5);letter-spacing:2px;
-  text-decoration:none;margin-bottom:20px;
+  margin-bottom:20px;
   padding:6px 14px;border:1px solid rgba(0,180,255,0.15);border-radius:4px;
-  transition:color .2s,border-color .2s;
 }
-.back:hover{color:#00c8ff;border-color:rgba(0,200,255,0.4);}
+.public-marker::before{content:'◇';color:#00c8ff;}
 
 /* card */
 .card{background:rgba(4,22,48,0.85);border:1px solid rgba(0,180,255,0.2);border-radius:8px;padding:20px;position:relative;overflow:hidden;backdrop-filter:blur(6px);margin-bottom:14px;}
@@ -128,7 +127,7 @@ html,body{width:100%;min-height:100vh;background:#020d1a;}
     </div>
   </div>
 
-  <a class="back" href="./index.html">← 返回看板</a>
+  <div class="public-marker">项目公开页 · PUBLIC VIEW</div>
 
   <div id="content"></div>
 
@@ -145,11 +144,21 @@ function tick(){
 tick();setInterval(tick,1000);
 
 const id=new URLSearchParams(location.search).get('id');
-fetch('./data.json?t='+Date.now()).then(r=>r.json()).then(d=>{
-  const p=d.projects.find(p=>p.id===id);
+if(!id){
+  document.getElementById('content').innerHTML='<div class="not-found">PROJECT ID MISSING</div>';
+}else{
+  loadProject(id).then(p=>{
   if(!p){document.getElementById('content').innerHTML='<div class="not-found">PROJECT NOT FOUND · '+id+'</div>';return;}
   render(p);
-}).catch(()=>{document.getElementById('content').innerHTML='<div class="not-found">FAILED TO LOAD DATA</div>';});
+  }).catch(()=>{document.getElementById('content').innerHTML='<div class="not-found">FAILED TO LOAD PROJECT DATA</div>';});
+}
+
+function loadProject(projectId){
+  // Detail pages load only one public project payload, not the full dashboard dataset.
+  return fetch('./public/'+encodeURIComponent(projectId)+'.json?t='+Date.now(),{cache:'no-store'})
+    .then(r=>r.ok?r.json():null)
+    .then(payload=>payload?(payload.project||payload):null);
+}
 
 function msClass(s){return {done:'done',active:'active',partial:'partial',pending:'pending'}[s]||'pending';}
 function msLabel(s){return {done:'DONE',active:'IN PROGRESS',partial:'PARTIAL',pending:'PENDING'}[s]||s.toUpperCase();}
