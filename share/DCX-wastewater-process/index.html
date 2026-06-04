@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta name="robots" content="noindex,nofollow">
+<title>DCX 污水处理 PCBA · 项目公开页</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Share+Tech+Mono&display=swap');
+*{box-sizing:border-box;margin:0;padding:0;}
+:root{
+  --bg:#020d1a;
+  --panel:#041630;
+  --panel2:#061d3c;
+  --line:rgba(0,180,255,.20);
+  --line2:rgba(0,200,255,.38);
+  --cyan:#00c8ff;
+  --green:#00ff88;
+  --amber:#ffa000;
+  --red:#ff5f7a;
+  --text:#e0f4ff;
+  --muted:rgba(180,225,255,.60);
+  --dim:rgba(160,220,255,.38);
+}
+html,body{width:100%;min-height:100vh;background:var(--bg);}
+body{
+  color:var(--text);
+  font-family:'Share Tech Mono',"Microsoft YaHei",monospace;
+  background:
+    radial-gradient(ellipse 60% 40% at 50% -10%,rgba(0,180,255,.08) 0%,transparent 70%),
+    radial-gradient(ellipse 30% 50% at 90% 50%,rgba(0,100,255,.05) 0%,transparent 60%),
+    repeating-linear-gradient(0deg,transparent,transparent 39px,rgba(0,180,255,.03) 40px),
+    repeating-linear-gradient(90deg,transparent,transparent 39px,rgba(0,180,255,.03) 40px),
+    linear-gradient(135deg,#020d1a 0%,#041628 52%,#020f1e 100%);
+}
+.scan-line{position:fixed;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,rgba(0,200,255,.25),transparent);animation:scan 5s ease-in-out infinite;pointer-events:none;z-index:20;}
+@keyframes scan{0%{top:0;opacity:0;}5%{opacity:1;}95%{opacity:.35;}100%{top:100%;opacity:0;}}
+.page{position:relative;z-index:1;width:min(1320px,100%);margin:0 auto;padding:20px;}
+.topbar{display:flex;justify-content:space-between;align-items:center;gap:16px;border-bottom:1px solid var(--line);padding-bottom:16px;margin-bottom:18px;}
+.logo{font-family:'Orbitron',monospace;font-weight:900;font-size:21px;color:var(--cyan);letter-spacing:4px;text-shadow:0 0 24px rgba(0,200,255,.5);}
+.logo span{color:#fff;font-weight:400;}
+.logo-sub{font-size:10px;color:rgba(0,200,255,.42);letter-spacing:3px;margin-top:4px;}
+.status-pill{display:inline-flex;align-items:center;gap:8px;border:1px solid rgba(0,180,255,.18);border-radius:4px;padding:7px 12px;color:rgba(0,200,255,.62);font-size:11px;letter-spacing:2px;background:rgba(4,22,48,.72);}
+.status-dot{width:8px;height:8px;border-radius:50%;background:var(--green);box-shadow:0 0 8px var(--green);animation:pulse 2s ease-in-out infinite;}
+@keyframes pulse{0%,100%{opacity:1;}50%{opacity:.35;}}
+.grid{display:grid;gap:14px;margin-bottom:14px;}
+.hero-grid{grid-template-columns:minmax(0,1.55fr) 360px;}
+.two-grid{grid-template-columns:minmax(0,1.15fr) minmax(360px,.85fr);}
+.three-grid{grid-template-columns:repeat(3,1fr);}
+.card{
+  position:relative;
+  overflow:hidden;
+  border:1px solid var(--line);
+  border-radius:8px;
+  background:rgba(4,22,48,.86);
+  box-shadow:0 18px 60px rgba(0,0,0,.18);
+  backdrop-filter:blur(6px);
+}
+.card::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,rgba(0,200,255,.55),transparent);}
+.card-pad{padding:20px;}
+.card-title{font-size:10px;letter-spacing:2px;color:rgba(0,200,255,.58);text-transform:uppercase;margin-bottom:14px;}
+.hero-title{font-family:'Orbitron',monospace;font-size:30px;line-height:1.2;letter-spacing:2px;color:#fff;margin-bottom:10px;}
+.hero-desc{font-size:12px;line-height:1.75;color:var(--muted);max-width:780px;margin-bottom:18px;}
+.hero-meta{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;}
+.meta-box{border:1px solid rgba(0,180,255,.12);background:rgba(0,14,36,.48);border-radius:6px;padding:12px;min-height:76px;}
+.meta-label{font-size:9px;letter-spacing:1px;color:var(--dim);text-transform:uppercase;margin-bottom:7px;}
+.meta-value{font-size:13px;line-height:1.4;color:rgba(224,244,255,.88);font-weight:700;}
+.progress-card{display:grid;align-content:center;justify-items:center;text-align:center;min-height:270px;}
+.ring{width:172px;height:172px;position:relative;margin-bottom:12px;}
+.ring svg{width:172px;height:172px;transform:rotate(-90deg);}
+.ring strong{position:absolute;inset:0;display:grid;place-items:center;font-family:'Orbitron',monospace;font-size:36px;color:var(--cyan);text-shadow:0 0 18px rgba(0,200,255,.45);}
+.ring-label{font-size:10px;letter-spacing:2px;color:rgba(0,200,255,.45);text-transform:uppercase;margin-bottom:14px;}
+.progress-strip{width:100%;display:grid;grid-template-columns:1fr auto;gap:10px;align-items:center;}
+.bar{height:7px;border-radius:999px;background:rgba(0,60,120,.45);overflow:hidden;border:1px solid rgba(0,180,255,.08);}
+.bar-fill{height:100%;border-radius:999px;background:linear-gradient(90deg,#0060b8,var(--cyan));box-shadow:0 0 10px rgba(0,200,255,.45);}
+.bar-num{font-family:'Orbitron',monospace;font-size:13px;color:var(--cyan);}
+.metrics{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;}
+.metric{border:1px solid rgba(0,180,255,.11);background:rgba(0,14,36,.5);border-radius:6px;padding:13px 14px;}
+.metric b{display:block;font-family:'Orbitron',monospace;font-size:26px;line-height:1;color:var(--cyan);text-shadow:0 0 12px rgba(0,200,255,.3);}
+.metric span{display:block;font-size:9px;color:var(--dim);letter-spacing:1px;margin-top:7px;text-transform:uppercase;}
+.issue-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;}
+.issue{border:1px solid rgba(255,160,0,.22);border-left:3px solid var(--amber);background:rgba(40,25,0,.22);border-radius:0 6px 6px 0;padding:12px;min-height:136px;}
+.issue.high{border-color:rgba(255,95,122,.28);border-left-color:var(--red);background:rgba(55,10,24,.22);}
+.issue-top{display:flex;justify-content:space-between;align-items:flex-start;gap:10px;margin-bottom:9px;}
+.issue-title{font-size:13px;font-weight:700;line-height:1.45;color:#fff;}
+.priority{font-size:9px;letter-spacing:1px;color:#ffd08a;border:1px solid rgba(255,160,0,.24);border-radius:2px;padding:3px 7px;white-space:nowrap;}
+.issue.high .priority{color:#ff9fb0;border-color:rgba(255,95,122,.28);}
+.issue-action{font-size:11px;line-height:1.65;color:rgba(220,238,255,.68);margin-bottom:10px;}
+.issue-foot{display:flex;justify-content:space-between;gap:10px;font-size:10px;color:rgba(0,200,255,.42);border-top:1px solid rgba(0,180,255,.08);padding-top:9px;}
+.stage-lane{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;}
+.stage{position:relative;border:1px solid rgba(0,180,255,.12);background:rgba(0,14,36,.45);border-radius:6px;padding:14px 12px;min-height:138px;}
+.stage::after{content:'';position:absolute;top:19px;right:-11px;width:11px;height:1px;background:rgba(0,200,255,.28);}
+.stage:last-child::after{display:none;}
+.stage-dot{width:12px;height:12px;border-radius:50%;background:rgba(60,100,160,.4);border:1px solid rgba(0,180,255,.20);margin-bottom:12px;}
+.stage.active{border-color:rgba(0,200,255,.35);box-shadow:0 0 18px rgba(0,200,255,.10);}
+.stage.active .stage-dot{background:var(--cyan);box-shadow:0 0 10px var(--cyan);animation:pulse 2s ease-in-out infinite;}
+.stage.done .stage-dot{background:var(--green);box-shadow:0 0 8px var(--green);}
+.stage-name{font-size:13px;font-weight:700;color:#fff;margin-bottom:8px;}
+.stage-text{font-size:11px;line-height:1.55;color:var(--muted);margin-bottom:10px;}
+.stage-pct{font-family:'Orbitron',monospace;font-size:15px;color:var(--cyan);}
+.task-list,.mile-list{display:grid;gap:9px;}
+.task{display:grid;grid-template-columns:28px minmax(0,1fr) auto;gap:10px;align-items:center;border:1px solid rgba(0,180,255,.10);background:rgba(0,14,36,.48);border-radius:5px;padding:10px 12px;}
+.task-no{width:28px;height:28px;border-radius:4px;background:rgba(0,200,255,.08);border:1px solid rgba(0,180,255,.15);display:grid;place-items:center;font-family:'Orbitron',monospace;font-size:11px;color:var(--cyan);}
+.task-name{font-size:12px;line-height:1.45;color:rgba(224,244,255,.82);}
+.task-state{font-size:9px;letter-spacing:1px;color:var(--amber);background:rgba(255,160,0,.08);border-radius:2px;padding:3px 7px;white-space:nowrap;}
+.mile{display:grid;grid-template-columns:13px minmax(0,1fr) auto;gap:10px;align-items:start;border-bottom:1px solid rgba(0,180,255,.08);padding-bottom:10px;}
+.mile:last-child{border-bottom:0;padding-bottom:0;}
+.mile-dot{width:10px;height:10px;border-radius:50%;background:rgba(60,100,160,.45);border:1px solid rgba(0,180,255,.20);margin-top:3px;}
+.mile.active .mile-dot{background:var(--cyan);box-shadow:0 0 8px var(--cyan);}
+.mile-name{font-size:12px;font-weight:700;color:rgba(224,244,255,.82);line-height:1.45;}
+.mile-meta{font-size:10px;color:var(--dim);margin-top:3px;}
+.mile-status{font-size:9px;color:rgba(160,200,255,.45);background:rgba(60,100,160,.08);border-radius:2px;padding:3px 7px;white-space:nowrap;}
+.note-row{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;}
+.note{border:1px solid rgba(0,180,255,.10);background:rgba(0,14,36,.45);border-radius:6px;padding:14px;min-height:126px;}
+.note h3{font-size:12px;color:#fff;margin-bottom:8px;}
+.note p{font-size:11px;line-height:1.7;color:var(--muted);}
+.footer{text-align:center;margin-top:16px;font-size:9px;color:rgba(0,200,255,.22);letter-spacing:3px;padding-top:12px;border-top:1px solid rgba(0,180,255,.08);}
+.loading{border:1px solid var(--line);background:rgba(4,22,48,.86);border-radius:8px;padding:60px 20px;text-align:center;color:rgba(0,200,255,.45);letter-spacing:2px;}
+@media(max-width:1100px){
+  .hero-grid,.two-grid{grid-template-columns:1fr;}
+  .stage-lane,.note-row{grid-template-columns:1fr;}
+  .stage::after{display:none;}
+}
+@media(max-width:760px){
+  .page{padding:16px;}
+  .topbar{align-items:flex-start;flex-direction:column;}
+  .hero-title{font-size:24px;}
+  .hero-meta,.metrics,.issue-grid{grid-template-columns:1fr;}
+  .task{grid-template-columns:28px minmax(0,1fr);}
+  .task-state{grid-column:2;}
+}
+</style>
+</head>
+<body>
+<div class="scan-line"></div>
+<main class="page">
+  <div class="topbar">
+    <div>
+      <div class="logo">DCX<span> · PCBA</span></div>
+      <div class="logo-sub">PUBLIC PROJECT CONTROL</div>
+    </div>
+    <div class="status-pill"><span class="status-dot"></span>PROJECT VIEW · NO DASHBOARD ACCESS</div>
+  </div>
+
+  <div id="app" class="loading">LOADING PROJECT CONTROL DATA</div>
+  <div class="footer">PUBLIC PROJECT VIEW · DCX WASTEWATER PROCESS</div>
+</main>
+
+<script>
+const stages=[
+  {name:'需求分析',text:'确认控制逻辑、接口、验收口径与器件约束',status:'active',pct:20},
+  {name:'原理图设计',text:'形成电源、通信、采集、执行控制电路方案',status:'pending',pct:0},
+  {name:'PCB 布局',text:'完成板框、接口、隔离、走线与可制造性布局',status:'pending',pct:0},
+  {name:'BOM 报价',text:'汇总被动器件型号、数量、替代料、单价与交期',status:'pending',pct:0},
+  {name:'生产协调',text:'衔接打样资料、生产计划、风险反馈与交付确认',status:'pending',pct:0}
+];
+const notes=[
+  ['当前目标','先把需求和关键输入冻结，避免原理图、PCB、BOM 报价后续反复返工。'],
+  ['协作重点','需要对方尽快补齐需求边界、关键器件要求、板框接口和报价资料。'],
+  ['输出物','需求记录、原理图设计输入、PCB 布局约束、BOM 报价清单、生产协调记录。']
+];
+const statusText={done:'已完成',active:'进行中',partial:'部分完成',pending:'待开始'};
+
+fetch('./project.json?t='+Date.now(),{cache:'no-store'})
+  .then(r=>r.json())
+  .then(payload=>render(payload.project,payload.lastUpdated))
+  .catch(()=>{document.getElementById('app').textContent='FAILED TO LOAD PROJECT DATA';});
+
+function render(p,lastUpdated){
+  const pct=p.progress||0;
+  const issues=p.issues||[];
+  const openT=p.openTasks||0;
+  const doneT=p.completedTasks||0;
+  const totalT=openT+doneT;
+  const radius=72;
+  const circ=2*Math.PI*radius;
+  const dash=(pct/100*circ).toFixed(2);
+  document.title=p.name+' · 项目公开页';
+  document.getElementById('app').className='';
+  document.getElementById('app').innerHTML=`
+    <section class="grid hero-grid">
+      <div class="card card-pad">
+        <div class="card-title">项目总览 · PROJECT SNAPSHOT</div>
+        <h1 class="hero-title">${p.name}</h1>
+        <div class="hero-desc">${p.description||''}</div>
+        <div class="hero-meta">
+          <div class="meta-box"><div class="meta-label">当前阶段</div><div class="meta-value">${p.currentPhase||'待更新'}</div></div>
+          <div class="meta-box"><div class="meta-label">下一节点</div><div class="meta-value">${nextCheckpoint(p)}</div></div>
+          <div class="meta-box"><div class="meta-label">最后活动</div><div class="meta-value">${p.lastActivity||formatDate(lastUpdated)||'待更新'}</div></div>
+        </div>
+      </div>
+      <div class="card card-pad progress-card">
+        <div class="ring">
+          <svg viewBox="0 0 172 172">
+            <circle cx="86" cy="86" r="${radius}" fill="none" stroke="rgba(0,60,120,.42)" stroke-width="12"/>
+            <circle cx="86" cy="86" r="${radius}" fill="none" stroke="#00c8ff" stroke-width="12" stroke-linecap="round" stroke-dasharray="${dash} ${circ.toFixed(2)}" style="filter:drop-shadow(0 0 7px rgba(0,200,255,.55));"/>
+          </svg>
+          <strong>${pct}%</strong>
+        </div>
+        <div class="ring-label">整体项目进度</div>
+        <div class="progress-strip">
+          <div class="bar"><div class="bar-fill" style="width:${pct}%"></div></div>
+          <div class="bar-num">${pct}%</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="metrics">
+      <div class="metric"><b>${issues.length}</b><span>Open Issues</span></div>
+      <div class="metric"><b>${totalT}</b><span>Total Tasks</span></div>
+      <div class="metric"><b>${openT}</b><span>Open Tasks</span></div>
+      <div class="metric"><b>${completion(totalT,doneT)}%</b><span>Task Complete</span></div>
+    </section>
+
+    <section class="grid">
+      <div class="card card-pad">
+        <div class="card-title">完整进度 · END-TO-END PROGRESS</div>
+        <div class="stage-lane">
+          ${stages.map(s=>`<div class="stage ${s.status}">
+            <div class="stage-dot"></div>
+            <div class="stage-name">${s.name}</div>
+            <div class="stage-text">${s.text}</div>
+            <div class="progress-strip">
+              <div class="bar"><div class="bar-fill" style="width:${s.pct}%"></div></div>
+              <div class="bar-num">${s.pct}%</div>
+            </div>
+          </div>`).join('')}
+        </div>
+      </div>
+    </section>
+
+    <section class="grid">
+      <div class="card card-pad">
+        <div class="card-title">待解决问题 · ISSUES TO RESOLVE</div>
+        <div class="issue-grid">
+          ${issues.map(issue=>`<div class="issue ${issue.priority==='high'?'high':''}">
+            <div class="issue-top">
+              <div class="issue-title">${issue.title}</div>
+              <div class="priority">${(issue.priority||'medium').toUpperCase()}</div>
+            </div>
+            <div class="issue-action">${issue.action}</div>
+            <div class="issue-foot">
+              <span>OWNER: ${issue.owner||'待确认'}</span>
+              <span>${issue.status||'待解决'}</span>
+            </div>
+          </div>`).join('')}
+        </div>
+      </div>
+    </section>
+
+    <section class="grid two-grid">
+      <div class="card card-pad">
+        <div class="card-title">当前待办 · PENDING TASKS</div>
+        <div class="task-list">
+          ${(p.pendingItems||[]).map((t,i)=>`<div class="task">
+            <div class="task-no">${String(i+1).padStart(2,'0')}</div>
+            <div class="task-name">${t}</div>
+            <div class="task-state">待推进</div>
+          </div>`).join('')}
+        </div>
+      </div>
+      <div class="card card-pad">
+        <div class="card-title">里程碑 · MILESTONES</div>
+        <div class="mile-list">
+          ${(p.milestones||[]).map(m=>`<div class="mile ${m.status==='active'?'active':''}">
+            <div class="mile-dot"></div>
+            <div>
+              <div class="mile-name">${m.name}</div>
+              <div class="mile-meta">${m.target||'目标时间待定'}</div>
+            </div>
+            <div class="mile-status">${statusText[m.status]||m.status||'待开始'}</div>
+          </div>`).join('')}
+        </div>
+      </div>
+    </section>
+
+    <section class="note-row">
+      ${notes.map(n=>`<div class="card note"><h3>${n[0]}</h3><p>${n[1]}</p></div>`).join('')}
+    </section>`;
+}
+
+function nextCheckpoint(p){
+  const item=(p.milestones||[]).find(m=>m.status!=='done')||(p.pendingItems||[])[0];
+  return item ? (item.name||item) : '待更新';
+}
+function completion(total,done){return total>0?Math.round(done/total*100):0;}
+function formatDate(value){return value?String(value).slice(0,10):'';}
+</script>
+</body>
+</html>

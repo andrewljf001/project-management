@@ -144,6 +144,9 @@ function tick(){
 tick();setInterval(tick,1000);
 
 const id=new URLSearchParams(location.search).get('id');
+if(id==='DCX-wastewater-process'){
+  window.location.replace('../share/DCX-wastewater-process/');
+}
 if(!id){
   document.getElementById('content').innerHTML='<div class="not-found">PROJECT ID MISSING</div>';
 }else{
