@@ -1,64 +1,137 @@
 {
-  "lastUpdated": "2026-06-03T00:00:00.000Z",
+  "lastUpdated": "2026-06-04T00:00:00.000Z",
   "project": {
     "id": "DCX-wastewater-process",
     "name": "DCX 污水处理 PCBA",
     "repo": "andrewljf001/DCX-wastewater-process",
     "status": "active",
-    "description": "被动器件采购、报价与 PCBA 生产协调（德创鑫徐工）",
-    "progress": 5,
-    "currentPhase": "项目初始化",
-    "openTasks": 4,
-    "completedTasks": 0,
-    "lastActivity": "2026-05-24",
+    "description": "8 份 BOM 对应 5 个独立机型的小批量试产推进；PCB 已下单，长交期模块已下单，当前重点是 6 月 18 日物料齐套 Check 与 6 月 21 日上线贴片准备。",
+    "progress": 45,
+    "currentPhase": "小批量试产准备中：PCB 与长交期模块已下单",
+    "openTasks": 8,
+    "completedTasks": 4,
+    "lastActivity": "2026-06-04",
+    "summaryStats": [
+      {"label": "BOM 数量", "value": "8"},
+      {"label": "独立机型", "value": "5"},
+      {"label": "物料 Check", "value": "06-18"},
+      {"label": "上线贴片", "value": "06-21"}
+    ],
+    "notes": [
+      {
+        "title": "当前主线",
+        "text": "当前项目重点是 8 份 BOM、5 个独立机型的小批量试产组织与上线准备。"
+      },
+      {
+        "title": "试产准备",
+        "text": "PCB 已下单，长交期模块已下单；需围绕 6 月 18 日齐套 Check 和 6 月 19 日生产准备完成节点推进。"
+      },
+      {
+        "title": "客户协同",
+        "text": "需提前确认测试、烧录、上线指导与三防喷涂处理方案，避免 6 月 21 日上线贴片时卡点。"
+      }
+    ],
     "pendingItems": [
-      "需求分析",
-      "硬件原理图设计",
-      "PCB 布局",
-      "BOM 报价汇总"
+      "6 月 6 日前明确三防喷涂机器协调方案（小马总）",
+      "6 月 6 日前向客户确认测试与烧录方法指导（黎剑锋）",
+      "小王持续跟进模块等长交期物料，预计 6 月 20 日左右到达",
+      "6 月 18 日完成物料到齐状况 Check",
+      "6 月 19 日前完成被动元件、贴片、插件准备",
+      "6 月 19 日前完成测试治夹具制作",
+      "6 月 19 日前完成钢网制作",
+      "预定 6 月 21 日上线贴片，并通知客户上线指导"
+    ],
+    "stages": [
+      {
+        "name": "BOM / 机型确认",
+        "text": "已从客户手中拿到 8 份 BOM，对应 5 个独立机型，试产范围已明确。",
+        "status": "done",
+        "pct": 100
+      },
+      {
+        "name": "PCB 与长交期物料",
+        "text": "PCB 已下单；交期较久的模块已下单，预计 6 月 20 日左右到达。",
+        "status": "active",
+        "pct": 70
+      },
+      {
+        "name": "6/18 齐套 Check",
+        "text": "6 月 18 日作为物料到齐状况检查点，确认模块、被动元件、贴片、插件等齐套风险。",
+        "status": "pending",
+        "pct": 35
+      },
+      {
+        "name": "6/19 生产准备",
+        "text": "被动元件、贴片、插件、测试治夹具制作与钢网制作需在 6 月 19 日前完成。",
+        "status": "pending",
+        "pct": 25
+      },
+      {
+        "name": "6/21 上线贴片",
+        "text": "预定 6 月 21 日上线贴片，并提前通知客户到场进行上线指导。",
+        "status": "pending",
+        "pct": 0
+      },
+      {
+        "name": "试产闭环",
+        "text": "完成贴片、测试、烧录、三防喷涂与问题闭环，形成小批量试产交付记录。",
+        "status": "pending",
+        "pct": 0
+      }
     ],
     "issues": [
       {
-        "title": "需求边界与关键控制点待确认",
+        "title": "三防喷涂机器协调方案未确认",
         "priority": "high",
-        "owner": "DCX / 项目对接人",
-        "status": "待解决",
-        "action": "补齐污水处理控制逻辑、输入输出接口、关键器件约束与验收口径。"
+        "owner": "小马总",
+        "status": "需 2026-06-06 前确认",
+        "action": "本周六前明确三防喷涂机器如何处理：自有设备、外协安排、上线前可用性与责任人。"
       },
       {
-        "title": "硬件原理图设计输入不足",
+        "title": "客户测试与烧录方法指导未确认",
         "priority": "high",
-        "owner": "硬件设计",
-        "status": "待推进",
-        "action": "基于已确认需求形成原理图设计输入，并标注电源、通信、采集与执行控制要求。"
+        "owner": "黎剑锋 / 客户",
+        "status": "需 2026-06-06 前沟通",
+        "action": "本周六前与客户确认具体测试方法、烧录方法、测试点与上线指导要求，以便提前制作测试治具。"
       },
       {
-        "title": "PCB 布局约束尚未冻结",
+        "title": "模块等长交期物料到货风险需跟进",
         "priority": "medium",
-        "owner": "PCB Layout",
-        "status": "待推进",
-        "action": "确认板框、接口位置、安装孔、散热/隔离要求及可制造性限制。"
-      },
-      {
-        "title": "BOM 报价资料待汇总",
-        "priority": "medium",
-        "owner": "采购 / 报价",
-        "status": "待推进",
-        "action": "整理被动器件型号、数量、替代料策略、单价与交期，形成报价清单。"
+        "owner": "小王",
+        "status": "6 月 18 日 Check，预计 6 月 20 日左右到达",
+        "action": "持续跟进模块等交期较久物料的发货、物流、到货风险，并在 6 月 18 日给出齐套判断。"
       }
     ],
     "milestones": [
       {
-        "name": "需求分析",
-        "status": "pending"
+        "name": "收到 8 份 BOM，对应 5 个独立机型",
+        "status": "done",
+        "target": "已完成"
       },
       {
-        "name": "BOM 报价汇总",
-        "status": "pending"
+        "name": "PCB 下单、长交期模块下单",
+        "status": "active",
+        "target": "已完成 / 跟进中"
       },
       {
-        "name": "生产协调完成",
-        "status": "pending"
+        "name": "三防喷涂与测试烧录方法确认",
+        "status": "active",
+        "target": "2026-06-06"
+      },
+      {
+        "name": "物料齐套状况 Check",
+        "status": "pending",
+        "target": "2026-06-18"
+      },
+      {
+        "name": "被动元件、贴片、插件、治夹具、钢网准备完成",
+        "status": "pending",
+        "target": "2026-06-19"
+      },
+      {
+        "name": "上线贴片并通知客户指导",
+        "status": "pending",
+        "target": "2026-06-21"
       }
     ]
   }

@@ -74,7 +74,7 @@ body{
 .bar{height:7px;border-radius:999px;background:rgba(0,60,120,.45);overflow:hidden;border:1px solid rgba(0,180,255,.08);}
 .bar-fill{height:100%;border-radius:999px;background:linear-gradient(90deg,#0060b8,var(--cyan));box-shadow:0 0 10px rgba(0,200,255,.45);}
 .bar-num{font-family:'Orbitron',monospace;font-size:13px;color:var(--cyan);}
-.metrics{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;}
+.metrics{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;}
 .metric{border:1px solid rgba(0,180,255,.11);background:rgba(0,14,36,.5);border-radius:6px;padding:13px 14px;}
 .metric b{display:block;font-family:'Orbitron',monospace;font-size:26px;line-height:1;color:var(--cyan);text-shadow:0 0 12px rgba(0,200,255,.3);}
 .metric span{display:block;font-size:9px;color:var(--dim);letter-spacing:1px;margin-top:7px;text-transform:uppercase;}
@@ -147,18 +147,6 @@ body{
 </main>
 
 <script>
-const stages=[
-  {name:'需求分析',text:'确认控制逻辑、接口、验收口径与器件约束',status:'active',pct:20},
-  {name:'原理图设计',text:'形成电源、通信、采集、执行控制电路方案',status:'pending',pct:0},
-  {name:'PCB 布局',text:'完成板框、接口、隔离、走线与可制造性布局',status:'pending',pct:0},
-  {name:'BOM 报价',text:'汇总被动器件型号、数量、替代料、单价与交期',status:'pending',pct:0},
-  {name:'生产协调',text:'衔接打样资料、生产计划、风险反馈与交付确认',status:'pending',pct:0}
-];
-const notes=[
-  ['当前目标','先把需求和关键输入冻结，避免原理图、PCB、BOM 报价后续反复返工。'],
-  ['协作重点','需要对方尽快补齐需求边界、关键器件要求、板框接口和报价资料。'],
-  ['输出物','需求记录、原理图设计输入、PCB 布局约束、BOM 报价清单、生产协调记录。']
-];
 const statusText={done:'已完成',active:'进行中',partial:'部分完成',pending:'待开始'};
 
 fetch('./project.json?t='+Date.now(),{cache:'no-store'})
@@ -169,6 +157,9 @@ fetch('./project.json?t='+Date.now(),{cache:'no-store'})
 function render(p,lastUpdated){
   const pct=p.progress||0;
   const issues=p.issues||[];
+  const stages=p.stages||[];
+  const notes=p.notes||[];
+  const summaryStats=p.summaryStats||[];
   const openT=p.openTasks||0;
   const doneT=p.completedTasks||0;
   const totalT=openT+doneT;
@@ -206,10 +197,8 @@ function render(p,lastUpdated){
     </section>
 
     <section class="metrics">
-      <div class="metric"><b>${issues.length}</b><span>Open Issues</span></div>
-      <div class="metric"><b>${totalT}</b><span>Total Tasks</span></div>
-      <div class="metric"><b>${openT}</b><span>Open Tasks</span></div>
-      <div class="metric"><b>${completion(totalT,doneT)}%</b><span>Task Complete</span></div>
+      ${summaryStats.map(item=>`<div class="metric"><b>${item.value}</b><span>${item.label}</span></div>`).join('')}
+      <div class="metric"><b>${issues.length}</b><span>待解决问题</span></div>
     </section>
 
     <section class="grid">
@@ -275,7 +264,7 @@ function render(p,lastUpdated){
     </section>
 
     <section class="note-row">
-      ${notes.map(n=>`<div class="card note"><h3>${n[0]}</h3><p>${n[1]}</p></div>`).join('')}
+      ${notes.map(n=>`<div class="card note"><h3>${n.title}</h3><p>${n.text}</p></div>`).join('')}
     </section>`;
 }
 
