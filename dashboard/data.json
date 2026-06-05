@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-04T00:00:00.000Z",
+  "lastUpdated": "2026-06-05T00:00:00.000Z",
   "summary": {
     "total": 18,
     "active": 11,
@@ -284,15 +284,14 @@
       "name": "DCX 污水处理 PCBA",
       "repo": "andrewljf001/DCX-wastewater-process",
       "status": "active",
-      "description": "8 份 BOM 对应 5 个独立机型的小批量试产推进；PCB 已下单，长交期模块已下单，当前重点是 BOM 最终整理、6 月 18 日物料齐套 Check 与 6 月 21 日上线贴片准备。",
-      "progress": 45,
-      "currentPhase": "小批量试产准备中：BOM 最终整理、PCB 与长交期模块跟进中",
-      "openTasks": 11,
-      "completedTasks": 4,
-      "lastActivity": "2026-06-04",
+      "description": "8 份 BOM 对应 5 个独立机型的小批量试产推进；PCB 已下单，长交期模块已下单，三防喷涂机器协调方案已确认，当前重点是 BOM 最终整理、6 月 18 日物料齐套 Check 与 6 月 21 日上线贴片准备。",
+      "progress": 50,
+      "currentPhase": "小批量试产准备中：三防喷涂已确认，BOM 最终整理与长交期模块跟进中",
+      "openTasks": 10,
+      "completedTasks": 5,
+      "lastActivity": "2026-06-05",
       "pendingItems": [
         "整理 8 份 BOM 的最终版本，确认 5 个独立机型对应关系、替代料、位号、数量与版本一致性",
-        "6 月 6 日前明确三防喷涂机器协调方案（小马总）",
         "6 月 6 日前向客户确认测试与烧录方法指导（黎剑锋）",
         "小王持续跟进模块等长交期物料，预计 6 月 20 日左右到达",
         "6 月 18 日完成物料到齐状况 Check",
